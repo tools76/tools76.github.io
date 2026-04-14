@@ -4,72 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nazrul Tools - All-in-One Digital Utilities</title>
-
-    <meta name="google-site-verification" content="ByykX6qaniRV46wT76IzXF1ibuTM_aa8Ylof0NFcOWY" />
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HARE" />
     <meta name="google-adsense-account" content="ca-pub-7690803775663030">
-
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690803775663030" crossorigin="anonymous"></script>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap');
-        body { font-family: 'Hind Siliguri', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&family=Outfit:wght@400;700&display=swap');
+        
+        :root {
+            --primary: #3b82f6;
+            --accent: #6366f1;
+            --dark: #0f172a;
+        }
+
+        body { 
+            font-family: 'Hind Siliguri', sans-serif; 
+            background: #f8fafc;
+            color: var(--dark);
+        }
+
+        .premium-header {
+            background: radial-gradient(circle at top right, #2563eb, #000);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premium-header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            opacity: 0.1;
+        }
+
+        .tool-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
+        }
+
+        .search-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+
+        .icon-box {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.5);
+        }
+
+        .animated-btn {
+            background: linear-gradient(90deg, #3b82f6, #6366f1, #3b82f6);
+            background-size: 200%;
+            transition: 0.5s;
+        }
+
+        .animated-btn:hover {
+            background-position: right;
+        }
+
+        @keyframes pulse-soft {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .coming-soon {
+            animation: pulse-soft 2s infinite;
+        }
     </style>
 </head>
-<body class="bg-gray-50 min-h-screen flex flex-col items-center py-6 px-4">
+<body class="min-h-screen pb-10">
 
-    <div class="max-w-2xl w-full bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-gray-100">
+    <header class="premium-header pt-20 pb-28 px-4 text-center text-white shadow-2xl">
+        <div class="relative z-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight" style="font-family: 'Outfit', sans-serif;">
+                Nazrul<span class="text-blue-400">Tools</span>
+            </h1>
+            <p class="text-blue-100 mb-10 max-w-lg mx-auto text-lg opacity-90">
+                স্মার্ট ডিজিটাল ইউটিলিটি হাব — আপনার কাজকে সহজ এবং গতিশীল করার সেরা সমাধান।
+            </p>
+            
+            <div class="max-w-2xl mx-auto search-container p-2 rounded-3xl transition-all focus-within:ring-4 ring-blue-500/30">
+                <div class="relative flex items-center">
+                    <input type="text" id="toolSearch" onkeyup="searchTools()" placeholder="টুল খুঁজুন (যেমন: Thumbnail, Image, Resize...)" 
+                    class="w-full bg-transparent px-6 py-4 rounded-2xl text-white placeholder-blue-200 outline-none text-lg">
+                    <div class="pr-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto -mt-16 px-4 relative z-20">
         
-        <header class="text-center mb-6">
-            <h1 class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">Nazrul Tools</h1>
-            <p class="text-gray-600 text-sm md:text-base italic">আপনার ডিজিটাল কাজকে সহজ করার সেরা সমাধান</p>
-        </header>
-
-        <div class="mb-6 overflow-hidden flex justify-center">
-            <ins class="adsbygoogle"
-                 style="display:block; width:100%;"
-                 data-ad-client="ca-pub-7690803775663030"
-                 data-ad-slot="6417293900"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
+        <div class="mb-10 bg-white/70 backdrop-blur p-4 rounded-[2rem] shadow-xl border border-white/50 overflow-hidden text-center">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7690803775663030" data-ad-slot="6417293900" data-ad-format="auto" data-full-width-responsive="true"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <div class="bg-blue-50 p-5 rounded-2xl mb-8 border-l-4 border-blue-500 text-gray-700">
-            <h2 class="text-xl font-bold text-blue-800 mb-3">ইমেজ রিসাইজ কেন করবেন?</h2>
-            <ul class="list-disc list-inside space-y-2 text-sm md:text-base leading-relaxed">
-                <li><strong>ওয়েবসাইটের গতি বৃদ্ধি:</strong> বড় সাইজের ছবি ওয়েবসাইট লোড হতে সময় নেয়। রিসাইজ করলে সাইট দ্রুত ওপেন হয়।</li>
-                <li><strong>স্টোরেজ সাশ্রয়:</strong> ছবির কোয়ালিটি ঠিক রেখে সাইজ (KB) কমালে মেমোরি কম খরচ হয়।</li>
-                <li><strong>সহজ শেয়ারিং:</strong> ইমেইল বা সোশ্যাল মিডিয়ায় ছবি দ্রুত আপলোড ও শেয়ার করা যায়।</li>
-                <li><strong>অনলাইন ফরম পূরণ:</strong> সরকারি বা চাকরির আবেদনের ক্ষেত্রে নির্দিষ্ট KB-র মধ্যে ছবি আপলোড করা বাধ্যতামূলক।</li>
-            </ul>
-        </div>
-
-        <div class="text-center mb-8">
-            <a href="/image-resizer/" class="w-full md:w-auto inline-block bg-blue-600 text-white px-10 py-4 rounded-2xl font-bold text-lg shadow-lg hover:bg-blue-700 hover:-translate-y-1 transition duration-300 transform">
-                Go to Image Resizer →
+        <div id="toolGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <a href="https://tools76.github.io/Thumbnail-downloader/" class="tool-item group" data-tags="thumbnail downloader channel analysis ইউটিউব থাম্বনেইল ডাউনলোড চ্যানেল এনালাইসিস">
+                <div class="tool-card p-8 rounded-[2.5rem] flex items-center gap-6 h-full">
+                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1">Thumbnail Analysis</h3>
+                        <p class="text-gray-500">HD থাম্বনেইল ডাউনলোড এবং চ্যানেলের গভীর বিশ্লেষণ।</p>
+                    </div>
+                </div>
             </a>
+
+            <a href="https://tools76.github.io/image-resizer/" class="tool-item group" data-tags="image resizer photo compress ইমেজ রিসাইজার ফটো সাইজ কমানো">
+                <div class="tool-card p-8 rounded-[2.5rem] flex items-center gap-6 h-full border-b-4 border-blue-500">
+                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #10b981, #3b82f6);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1">Elite Image Resizer</h3>
+                        <p class="text-gray-500">পিক্সেল নিখুঁত রেখে ছবির সাইজ পরিবর্তন করার প্রো টুল।</p>
+                    </div>
+                </div>
+            </a>
+
+            <div class="tool-item" data-tags="new tools coming soon নতুন টুল আসছে">
+                <div class="tool-card bg-gray-100/50 border-dashed border-2 border-gray-300 p-8 rounded-[2.5rem] flex items-center gap-6 opacity-80">
+                    <div class="bg-gray-300 p-5 rounded-2xl text-gray-500 coming-soon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-400">More Tools Awaits...</h3>
+                        <p class="text-gray-400">অপেক্ষা করুন, আরও শক্তিশালী টুল শীঘ্রই আসছে!</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="mb-8 overflow-hidden flex justify-center">
-            <ins class="adsbygoogle"
-                 style="display:block; width:100%;"
-                 data-ad-client="ca-pub-7690803775663030"
-                 data-ad-slot="5826413062"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-
-        <nav class="flex flex-col sm:flex-row justify-center gap-3 border-t pt-8">
-            <a href="privacy-policy.html" class="bg-gray-100 text-gray-700 px-5 py-3 rounded-xl text-sm font-semibold hover:bg-gray-200 transition text-center">Privacy Policy</a>
-            <a href="contact.html" class="bg-gray-100 text-gray-700 px-5 py-3 rounded-xl text-sm font-semibold hover:bg-gray-200 transition text-center">Contact Us</a>
-            <a href="developer.html" class="bg-gray-100 text-gray-700 px-5 py-3 rounded-xl text-sm font-semibold hover:bg-gray-200 transition text-center">About Developer</a>
+        <nav class="flex flex-wrap justify-center gap-8 mt-16 border-t border-gray-200 pt-10">
+            <a href="privacy-policy.html" class="text-gray-600 hover:text-blue-600 font-bold text-lg transition-colors">Privacy Policy</a>
+            <a href="contact.html" class="text-gray-600 hover:text-blue-600 font-bold text-lg transition-colors">Contact Us</a>
+            <a href="developer.html" class="text-gray-600 hover:text-blue-600 font-bold text-lg transition-colors">Developer</a>
         </nav>
 
-        <footer class="mt-8 text-center text-gray-400 text-xs">
-            © 2026 Nazrul Tools. All Rights Reserved.
+        <footer class="mt-12 text-center">
+            <p class="text-gray-400 text-sm tracking-widest uppercase mb-2">© 2026 NAZRUL TOOLS PREMIUM</p>
+            <div class="h-1 w-20 bg-blue-500 mx-auto rounded-full"></div>
         </footer>
-    </div>
+    </main>
+
+    <script>
+        function searchTools() {
+            let input = document.getElementById('toolSearch').value.toLowerCase();
+            let items = document.getElementsByClassName('tool-item');
+            
+            for (let i = 0; i < items.length; i++) {
+                let tags = items[i].getAttribute('data-tags');
+                if (tags.toLowerCase().includes(input)) {
+                    items[i].style.display = "block";
+                    items[i].style.animation = "fadeIn 0.5s ease";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </body>
 </html>

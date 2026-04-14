@@ -84,7 +84,7 @@
             
             <div class="max-w-2xl mx-auto search-container p-2 rounded-3xl transition-all focus-within:ring-4 ring-blue-500/30">
                 <div class="relative flex items-center">
-                    <input type="text" id="toolSearch" onkeyup="searchTools()" placeholder="টুল খুঁজুন (যেমন: Converter, PDF, Image...)" 
+                    <input type="text" id="toolSearch" onkeyup="searchTools()" placeholder="টুল খুঁজুন (যেমন: Converter, QR Code, PDF...)" 
                     class="w-full bg-transparent px-6 py-4 rounded-2xl text-white placeholder-blue-200 outline-none text-lg">
                     <div class="pr-6">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -105,6 +105,20 @@
 
         <div id="toolGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
+            <a href="https://tools76.github.io/qrcodegenarator/" class="tool-item group" data-tags="qr code generator studio create qr scan কিউআর কোড জেনারেটর কোড তৈরি স্ক্যান">
+                <div class="tool-card p-8 rounded-[2.5rem] flex items-center gap-6 h-full border-b-4 border-orange-500">
+                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #f97316, #fbbf24);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1">Elite QR Code Studio</h3>
+                        <p class="text-gray-500">লোগো এবং ফ্রেম দিয়ে প্রফেশনাল QR কোড তৈরি করার প্রিমিয়াম টুল।</p>
+                    </div>
+                </div>
+            </a>
+
             <a href="https://tools76.github.io/Image-convertor/" class="tool-item group" data-tags="image pdf converter jpg to png webp ico svg ইমেজ পিডিএফ কনভার্টার ছবি পরিবর্তন">
                 <div class="tool-card p-8 rounded-[2.5rem] flex items-center gap-6 h-full border-b-4 border-indigo-500">
                     <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #6366f1, #a855f7);">
@@ -146,20 +160,6 @@
                     </div>
                 </div>
             </a>
-
-            <div class="tool-item" data-tags="new tools coming soon নতুন টুল আসছে">
-                <div class="tool-card bg-gray-100/50 border-dashed border-2 border-gray-300 p-8 rounded-[2.5rem] flex items-center gap-6 opacity-80">
-                    <div class="bg-gray-300 p-5 rounded-2xl text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-400">More Tools Awaits...</h3>
-                        <p class="text-gray-400">অপেক্ষা করুন, আরও শক্তিশালী টুল শীঘ্রই আসছে!</p>
-                    </div>
-                </div>
-            </div>
 
         </div>
 

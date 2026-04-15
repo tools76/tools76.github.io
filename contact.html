@@ -3,64 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Nazrul Tools</title>
+    <title>Contact Us - Nazrul Tools Premium Digital Support</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Hind+Siliguri:wght@400;700&display=swap');
-        body { font-family: 'Outfit', 'Hind Siliguri', sans-serif; background: #f0f4f8; color: #1e293b; }
-        .contact-card { background: white; border-radius: 2.5rem; border: 1px solid #e2e8f0; box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; }
-        .social-link { transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .social-link:hover { transform: translateY(-5px); }
+        body { font-family: 'Outfit', 'Hind Siliguri', sans-serif; background: #f1f5f9; color: #1e293b; line-height: 1.8; }
+        .contact-card { background: white; border-radius: 3rem; border: 1px solid #e2e8f0; box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.1); }
+        .social-link { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .social-link:hover { transform: translateY(-8px); box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1); }
         .hidden { display: none; }
+        section { margin-bottom: 2.5rem; }
+        h2 { font-size: 1.5rem; font-weight: 700; color: #1e40af; margin-bottom: 1rem; display: flex; items-center: center; }
+        p { text-align: justify; margin-bottom: 1rem; color: #475569; }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4 py-12">
+<body class="min-h-screen py-12 px-4 flex flex-col items-center">
 
-    <div class="max-w-xl w-full contact-card overflow-hidden">
-        <div class="flex justify-end p-4 bg-slate-50 border-b border-slate-100">
-            <button id="toggleLang" onclick="switchLang()" class="bg-blue-600 text-white px-5 py-2 rounded-full text-xs font-bold shadow-lg hover:bg-blue-700 transition-all">
+    <div class="max-w-4xl w-full contact-card overflow-hidden">
+        <div class="flex justify-end p-6 bg-slate-50 border-b border-slate-100">
+            <button id="toggleLang" onclick="switchLang()" class="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg hover:bg-blue-700 transition-all hover:scale-105 active:scale-95">
                 Translate to বাংলা
             </button>
         </div>
 
-        <div class="p-8 md:p-12 text-center">
+        <div class="p-8 md:p-16">
             
-            <div id="head-en">
-                <h1 class="text-4xl font-extrabold text-blue-600 mb-4">Get In Touch</h1>
-                <p class="text-slate-500 mb-10">Have questions or feedback? Feel free to contact me through any of the platforms below.</p>
+            <div id="head-en" class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-blue-600 mb-4 tracking-tight">Get In Touch</h1>
+                <p class="text-slate-500 text-lg max-w-2xl mx-auto">Have a technical query, business proposal, or just want to say hi? I am here to assist you 24/7 with Nazrul Tools and AMR SHOP inquiries.</p>
             </div>
-            <div id="head-bn" class="hidden">
-                <h1 class="text-4xl font-bold text-blue-600 mb-4">যোগাযোগ করুন</h1>
-                <p class="text-slate-500 mb-10">আমাদের টুলস নিয়ে আপনার কোনো প্রশ্ন বা পরামর্শ থাকলে নিচের প্ল্যাটফর্মগুলোর মাধ্যমে যোগাযোগ করতে পারেন।</p>
-            </div>
-
-            <div class="mb-10">
-                <h2 class="text-2xl font-bold text-slate-800">Nazrul Islam</h2>
-                <p class="text-blue-500 font-medium">Founder of AMR SHOP & Nazrul Tools</p>
-                <p class="text-slate-400 text-sm mt-1">Chhatak, Sylhet, Bangladesh</p>
+            
+            <div id="head-bn" class="hidden text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-blue-600 mb-4 tracking-tight">যোগাযোগের মাধ্যম</h1>
+                <p class="text-slate-500 text-lg max-w-2xl mx-auto">আপনার কি কোনো কারিগরি প্রশ্ন, ব্যবসায়িক প্রস্তাব বা পরামর্শ আছে? নজরুল টুলস এবং এএমআর শপ সংক্রান্ত যেকোনো প্রয়োজনে আমি আছি আপনার পাশে।</p>
             </div>
 
-            <div class="grid grid-cols-2 gap-4 mb-10">
-                <a href="mailto:nazrulislam887441234@gmail.com" class="social-link p-6 bg-blue-50 rounded-3xl border border-blue-100 flex flex-col items-center">
-                    <span class="text-3xl mb-2">📧</span>
-                    <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">Email</span>
+            <div id="content-en" class="space-y-8">
+                <section>
+                    <h2>1. Why Contact Us?</h2>
+                    <p>At Nazrul Tools, we believe in the power of open communication. Whether you are a regular user of our "YouTube Thumbnail Downloader" or a developer interested in our "Firebase Integration" methods, your feedback helps us grow. CEO Nazrul Islam personally oversees all technical support to ensure that every user receives a premium experience. If you encounter any bugs, glitches, or have suggestions for new tools, don't hesitate to reach out.</p>
+                </section>
+
+                <section>
+                    <h2>2. Business & Partnership</h2>
+                    <p>As the founder of <strong>AMR SHOP</strong>, Nazrul Islam is always open to discussing digital marketing strategies, e-commerce collaborations, and software development projects. If you represent a brand or a startup looking for technical consultation in the Sylhet division or globally, our official channels are the best way to start a conversation. We prioritize professional inquiries regarding web architecture and digital branding.</p>
+                </section>
+            </div>
+
+            <div id="content-bn" class="hidden space-y-8">
+                <section>
+                    <h2>১. কেন আমাদের সাথে যোগাযোগ করবেন?</h2>
+                    <p>নজরুল টুলস-এ আমরা উন্মুক্ত যোগাযোগে বিশ্বাস করি। আপনি আমাদের ইউটিউব থাম্বনেইল ডাউনলোডার ব্যবহারকারী হোন বা একজন ডেভেলপার—আপনার প্রতিটি পরামর্শ আমাদের কাছে মূল্যবান। সিইও নজরুল ইসলাম ব্যক্তিগতভাবে প্রতিটি টেকনিক্যাল সাপোর্ট তদারকি করেন। আমাদের টুলস ব্যবহার করতে গিয়ে কোনো সমস্যায় পড়লে বা নতুন কোনো টুলের আইডিয়া থাকলে আমাদের জানাতে দ্বিধা করবেন না।</p>
+                </section>
+
+                <section>
+                    <h2>২. ব্যবসায়িক সহযোগিতা ও পার্টনারশিপ</h2>
+                    <p><strong>এএমআর শপ</strong>-এর প্রতিষ্ঠাতা হিসেবে নজরুল ইসলাম ডিজিটাল মার্কেটিং, ই-কমার্স কোলাবরেশন এবং সফটওয়্যার ডেভেলপমেন্ট প্রজেক্ট নিয়ে আলোচনা করতে সর্বদা আগ্রহী। আপনি যদি কোনো ব্র্যান্ড বা স্টার্টআপের প্রতিনিধি হয়ে থাকেন এবং কারিগরি পরামর্শ পেতে চান, তবে আমাদের অফিসিয়াল চ্যানেলের মাধ্যমে যোগাযোগ করুন। আমরা সিলেটসহ বিশ্বব্যাপী ডিজিটাল ব্র্যান্ডিং এবং ওয়েব আর্কিটেকচার নিয়ে কাজ করতে আগ্রহী।</p>
+                </section>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-12">
+                <a href="mailto:nazrulislam887441234@gmail.com?subject=Inquiry%20for%20Nazrul%20Tools" class="social-link p-6 bg-blue-50 rounded-3xl border border-blue-100 flex flex-col items-center group">
+                    <span class="text-4xl mb-3 group-hover:scale-110 transition-transform">📧</span>
+                    <span class="text-xs font-black text-blue-700 uppercase tracking-widest">Email</span>
                 </a>
-                <a href="https://wa.me/8801727003670" target="_blank" class="social-link p-6 bg-green-50 rounded-3xl border border-green-100 flex flex-col items-center">
-                    <span class="text-3xl mb-2">💬</span>
-                    <span class="text-xs font-bold text-green-700 uppercase tracking-wider">WhatsApp</span>
+                <a href="https://wa.me/8801316487435" target="_blank" class="social-link p-6 bg-green-50 rounded-3xl border border-green-100 flex flex-col items-center group">
+                    <span class="text-4xl mb-3 group-hover:scale-110 transition-transform">💬</span>
+                    <span class="text-xs font-black text-green-700 uppercase tracking-widest">WhatsApp</span>
                 </a>
-                <a href="https://youtube.com/@amr_technology_nazrul?si=CJ1cMX730DWcsZu9" target="_blank" class="social-link p-6 bg-red-50 rounded-3xl border border-red-100 flex flex-col items-center">
-                    <span class="text-3xl mb-2">🎥</span>
-                    <span class="text-xs font-bold text-red-700 uppercase tracking-wider">YouTube</span>
+                <a href="https://youtube.com/@amr_technology_nazrul" target="_blank" class="social-link p-6 bg-red-50 rounded-3xl border border-red-100 flex flex-col items-center group">
+                    <span class="text-4xl mb-3 group-hover:scale-110 transition-transform">🎥</span>
+                    <span class="text-xs font-black text-red-700 uppercase tracking-widest">YouTube</span>
                 </a>
-                <a href="https://www.facebook.com/share/1EBZ2nirNW/" target="_blank" class="social-link p-6 bg-indigo-50 rounded-3xl border border-indigo-100 flex flex-col items-center">
-                    <span class="text-3xl mb-2">👤</span>
-                    <span class="text-xs font-bold text-indigo-700 uppercase tracking-wider">Facebook</span>
+                <a href="https://www.facebook.com/share/1EBZ2nirNW/" target="_blank" class="social-link p-6 bg-indigo-50 rounded-3xl border border-indigo-100 flex flex-col items-center group">
+                    <span class="text-4xl mb-3 group-hover:scale-110 transition-transform">👤</span>
+                    <span class="text-xs font-black text-indigo-700 uppercase tracking-widest">Facebook</span>
                 </a>
             </div>
 
-            <div class="border-t border-slate-100 pt-8">
-                <a href="index.html" class="inline-flex items-center text-slate-400 hover:text-blue-600 font-bold transition-colors">
+            <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 mb-10">
+                <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Office Location
+                </h3>
+                <div class="text-slate-600 space-y-2">
+                    <p class="font-bold text-slate-900">Nazrul Islam (CEO & Founder)</p>
+                    <p>AMR TECHNOLOGY / AMR SHOP HQ</p>
+                    <p>Chorerbond, Chhatak, Sunamganj</p>
+                    <p>Sylhet Division, Bangladesh - 3080</p>
+                </div>
+            </div>
+
+            <div class="text-center pt-8 border-t border-slate-100">
+                <a href="index.html" class="inline-flex items-center text-slate-500 hover:text-blue-600 font-bold transition-all hover:gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                     </svg>
@@ -70,21 +108,31 @@
         </div>
     </div>
 
+    <footer class="mt-12 text-center text-slate-400 text-xs tracking-widest uppercase pb-10">
+        © 2026 NAZRUL TOOLS PREMIUM | POWERED BY AMR TECHNOLOGY
+    </footer>
+
     <script>
         function switchLang() {
             const hEn = document.getElementById('head-en');
             const hBn = document.getElementById('head-bn');
+            const cEn = document.getElementById('content-en');
+            const cBn = document.getElementById('content-bn');
             const btn = document.getElementById('toggleLang');
             const backText = document.getElementById('back-text');
 
             if (hEn.classList.contains('hidden')) {
                 hEn.classList.remove('hidden');
                 hBn.classList.add('hidden');
+                cEn.classList.remove('hidden');
+                cBn.classList.add('hidden');
                 btn.innerText = 'Translate to বাংলা';
                 backText.innerText = 'Back to Home';
             } else {
                 hEn.classList.add('hidden');
                 hBn.classList.remove('hidden');
+                cEn.classList.add('hidden');
+                cBn.classList.remove('hidden');
                 btn.innerText = 'Translate to English';
                 backText.innerText = 'হোম পেজে ফিরে যান';
             }

@@ -1,46 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://tools76.github.io/</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <priority>1.00</priority>
-    <changefreq>daily</changefreq>
   </url>
-
+  <url>
+    <loc>https://tools76.github.io/age-calculator/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://tools76.github.io/Strong-password-generator/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://tools76.github.io/Fancy-Name-Generator/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://tools76.github.io/qrcodegenarator/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://tools76.github.io/Image-convertor/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <priority>0.85</priority>
+  </url>
   <url>
     <loc>https://tools76.github.io/Thumbnail-downloader/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.90</priority>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-04-15</lastmod>
+    <priority>0.85</priority>
   </url>
-
   <url>
     <loc>https://tools76.github.io/image-resizer/</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <priority>0.85</priority>
-    <changefreq>weekly</changefreq>
   </url>
-
   <url>
     <loc>https://tools76.github.io/privacy-policy.html</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.50</priority>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-15</lastmod>
+    <priority>0.70</priority>
   </url>
-
+  <url>
+    <loc>https://tools76.github.io/termsandcondition.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <priority>0.70</priority>
+  </url>
   <url>
     <loc>https://tools76.github.io/contact.html</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.50</priority>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-15</lastmod>
+    <priority>0.70</priority>
   </url>
-
   <url>
     <loc>https://tools76.github.io/developer.html</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.50</priority>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-15</lastmod>
+    <priority>0.70</priority>
   </url>
-
-  </urlset>
+</urlset>

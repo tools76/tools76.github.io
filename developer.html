@@ -1,36 +1,110 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Developer - Nazrul Hub</title>
+    <title>About Developer - Nazrul Tools</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap');
-        body { font-family: 'Hind Siliguri', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Hind+Siliguri:wght@400;700&display=swap');
+        body { font-family: 'Outfit', 'Hind Siliguri', sans-serif; background: #f8fafc; color: #334155; }
+        .dev-card { background: white; border-radius: 2rem; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); }
+        .lang-btn { transition: all 0.3s ease; }
+        .hidden { display: none; }
     </style>
 </head>
-<body class="bg-gray-50 p-6">
-    <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow">
-        <h1 class="text-3xl font-bold text-blue-600 mb-4">About Developer</h1>
-        <p class="text-gray-700 mb-4 leading-relaxed">
-            আমি <strong>নজরুল ইসলাম</strong>, একজন প্রফেশনাল অ্যাপ ডেভেলপার, ওয়েব ডেভেলপার এবং গ্রাফিক্স ডিজাইনার। আমি ডিজিটাল প্ল্যাটফর্মে সৃজনশীল কাজ করতে ভালোবাসি।
-        </p>
-        <p class="text-gray-700 mb-4">
-            আমি <strong>AMR Technology Nazrul</strong> ইউটিউব চ্যানেলের মাধ্যমে প্রযুক্তিগত টিউটোরিয়াল শেয়ার করি এবং <strong>AMR SHOP</strong> নামক ডিজিটাল মার্কেটপ্লেসের প্রতিষ্ঠাতা। এই ইমেজ রিসাইজার টুলটি তৈরি করার মূল উদ্দেশ্য হলো ব্যবহারকারীদের সহজে এবং ফ্রিতে ছবির সাইজ কমানোর সুবিধা দেওয়া।
-        </p>
-        
-        <div class="bg-blue-50 p-4 rounded-xl">
-            <h3 class="font-bold text-blue-800 mb-2">আমার দক্ষতা:</h3>
-            <ul class="list-disc list-inside text-gray-700">
-                <li>Web Development (HTML, CSS, JS)</li>
-                <li>App Development (Firebase, Android)</li>
-                <li>Digital Marketing</li>
-                <li>Graphics Design</li>
-            </ul>
+<body class="py-10 px-4">
+
+    <div class="max-w-2xl mx-auto dev-card overflow-hidden">
+        <div class="flex justify-end p-4 bg-gray-50 border-b border-gray-100">
+            <button id="toggleLang" onclick="switchLang()" class="lang-btn bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-md hover:bg-blue-700">
+                Translate to বাংলা
+            </button>
         </div>
-        
-        <a href="index.html" class="mt-8 inline-block text-blue-600 hover:underline">← ফিরে যান</a>
+
+        <div class="p-8 md:p-12">
+            <div id="content-en">
+                <h1 class="text-3xl font-extrabold text-blue-600 mb-6">About Developer</h1>
+                <p class="text-gray-700 mb-4 leading-relaxed text-lg">
+                    I am <strong>Nazrul Islam</strong>, a professional Software Developer, Web Developer, and Graphics Designer. I am passionate about creating innovative digital solutions and high-quality creative content.
+                </p>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    I share technical tutorials through my YouTube channel, <strong>AMR Technology Nazrul</strong>, and I am the founder of the digital marketplace <strong>AMR SHOP</strong>. My goal with Nazrul Tools is to provide free, easy-to-use digital utilities for users worldwide.
+                </p>
+                
+                <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 mb-8">
+                    <h3 class="font-bold text-blue-800 mb-3 text-xl">My Skills:</h3>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-700">
+                        <li class="flex items-center">🚀 Web Development (HTML, CSS, JS)</li>
+                        <li class="flex items-center">📱 App Development (Firebase, Android)</li>
+                        <li class="flex items-center">📊 Digital Marketing</li>
+                        <li class="flex items-center">🎨 Graphics Design</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="content-bn" class="hidden">
+                <h1 class="text-3xl font-bold text-blue-600 mb-6">ডেভেলপার সম্পর্কে</h1>
+                <p class="text-gray-700 mb-4 leading-relaxed text-lg">
+                    আমি <strong>নজরুল ইসলাম</strong>, একজন প্রফেশনাল সফটওয়্যার ডেভেলপার, ওয়েব ডেভেলপার এবং গ্রাফিক্স ডিজাইনার। আমি ডিজিটাল প্ল্যাটফর্মে সৃজনশীল এবং কার্যকর সমাধান তৈরি করতে ভালোবাসি।
+                </p>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    আমি <strong>AMR Technology Nazrul</strong> ইউটিউব চ্যানেলের মাধ্যমে প্রযুক্তিগত টিউটোরিয়াল শেয়ার করি এবং আমি ডিজিটাল মার্কেটপ্লেস <strong>AMR SHOP</strong>-এর প্রতিষ্ঠাতা। Nazrul Tools তৈরির মূল লক্ষ্য হলো বিশ্বব্যাপী ব্যবহারকারীদের জন্য সহজ এবং ফ্রি ডিজিটাল ইউটিলিটি প্রদান করা।
+                </p>
+                
+                <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 mb-8">
+                    <h3 class="font-bold text-blue-800 mb-3 text-xl">আমার দক্ষতা:</h3>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-700">
+                        <li class="flex items-center">🚀 ওয়েব ডেভেলপমেন্ট (HTML, CSS, JS)</li>
+                        <li class="flex items-center">📱 অ্যাপ ডেভেলপমেন্ট (Firebase, Android)</li>
+                        <li class="flex items-center">📊 ডিজিটাল মার্কেটিং</li>
+                        <li class="flex items-center">🎨 গ্রাফিক্স ডিজাইন</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-100 pt-8 space-y-4">
+                <h3 class="font-bold text-gray-800 text-lg">Contact Me:</h3>
+                <div class="flex flex-col gap-3">
+                    <a href="mailto:nazrulislam887441234@gmail.com" class="flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                        <span class="mr-2">📧</span> nazrulislam887441234@gmail.com
+                    </a>
+                    <a href="https://wa.me/8801316487435" target="_blank" class="flex items-center text-green-600 hover:text-green-700 font-medium transition-colors">
+                        <span class="mr-2">💬</span> WhatsApp: +880 1316-487435
+                    </a>
+                </div>
+            </div>
+
+            <a href="index.html" class="mt-10 inline-flex items-center text-gray-500 hover:text-blue-600 font-bold transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Back to Home
+            </a>
+        </div>
     </div>
+
+    <script>
+        function switchLang() {
+            const en = document.getElementById('content-en');
+            const bn = document.getElementById('content-bn');
+            const btn = document.getElementById('toggleLang');
+
+            if (en.classList.contains('hidden')) {
+                en.classList.remove('hidden');
+                bn.classList.add('hidden');
+                btn.innerText = 'Translate to বাংলা';
+            } else {
+                en.classList.add('hidden');
+                bn.classList.remove('hidden');
+                btn.innerText = 'Translate to English';
+            }
+        }
+    </script>
+
+    <footer class="mt-8 text-center text-gray-400 text-xs tracking-widest uppercase">
+        © 2026 NAZRUL TOOLS PREMIUM
+    </footer>
+
 </body>
 </html>

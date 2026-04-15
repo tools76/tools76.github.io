@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690803775663030" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&family=Outfit:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
         
         :root {
             --primary: #3b82f6;
@@ -18,9 +18,10 @@
         }
 
         body { 
-            font-family: 'Hind Siliguri', sans-serif; 
+            font-family: 'Outfit', sans-serif; 
             background: #f8fafc;
             color: var(--dark);
+            overflow-x: hidden;
         }
 
         .premium-header {
@@ -42,6 +43,9 @@
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.4);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+            display: flex;
+            align-items: center;
         }
 
         .tool-card:hover {
@@ -61,6 +65,7 @@
         .icon-box {
             background: linear-gradient(135deg, var(--primary), var(--accent));
             box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.5);
+            flex-shrink: 0;
         }
 
         @keyframes fadeIn {
@@ -75,16 +80,16 @@
 
     <header class="premium-header pt-20 pb-28 px-4 text-center text-white shadow-2xl">
         <div class="relative z-10">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight" style="font-family: 'Outfit', sans-serif;">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">
                 Nazrul<span class="text-blue-400">Tools</span>
             </h1>
             <p class="text-blue-100 mb-10 max-w-lg mx-auto text-lg opacity-90">
-                স্মার্ট ডিজিটাল ইউটিলিটি হাব — আপনার কাজকে সহজ এবং গতিশীল করার সেরা সমাধান।
+                Smart Digital Utility Hub — The best solution to make your workflow faster and easier.
             </p>
             
             <div class="max-w-2xl mx-auto search-container p-2 rounded-3xl transition-all focus-within:ring-4 ring-blue-500/30">
                 <div class="relative flex items-center">
-                    <input type="text" id="toolSearch" onkeyup="searchTools()" placeholder="টুল খুঁজুন (যেমন: Converter, QR Code, PDF...)" 
+                    <input type="text" id="toolSearch" onkeyup="searchTools()" placeholder="Search Tools (e.g. Name, QR, Image, PDF...)" 
                     class="w-full bg-transparent px-6 py-4 rounded-2xl text-white placeholder-blue-200 outline-none text-lg">
                     <div class="pr-6">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -105,22 +110,36 @@
 
         <div id="toolGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <a href="https://tools76.github.io/qrcodegenarator/" class="tool-item group" data-tags="qr code generator studio create qr scan কিউআর কোড জেনারেটর কোড তৈরি স্ক্যান">
-                <div class="tool-card p-8 rounded-[2.5rem] flex items-center gap-6 h-full border-b-4 border-orange-500">
-                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #f97316, #fbbf24);">
+            <a href="https://tools76.github.io/Fancy-Name-Generator/" class="tool-item group" data-tags="stylish name generator fancy text creator fb nickname gaming symbols font style">
+                <div class="tool-card p-8 rounded-[2.5rem] border-b-4 border-pink-500 gap-6">
+                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-1">Elite QR Code Studio</h3>
-                        <p class="text-gray-500">লোগো এবং ফ্রেম দিয়ে প্রফেশনাল QR কোড তৈরি করার প্রিমিয়াম টুল।</p>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1">Stylish Name Generator</h3>
+                        <p class="text-gray-500">Generate 100+ fancy and stylish names for social media and gaming profiles.</p>
                     </div>
                 </div>
             </a>
 
-            <a href="https://tools76.github.io/Image-convertor/" class="tool-item group" data-tags="image pdf converter jpg to png webp ico svg ইমেজ পিডিএফ কনভার্টার ছবি পরিবর্তন">
-                <div class="tool-card p-8 rounded-[2.5rem] flex items-center gap-6 h-full border-b-4 border-indigo-500">
+            <a href="https://tools76.github.io/qrcodegenarator/" class="tool-item group" data-tags="qr code generator studio create qr scan">
+                <div class="tool-card p-8 rounded-[2.5rem] border-b-4 border-orange-500 gap-6">
+                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #f97316, #fbbf24);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1-1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1">Elite QR Code Studio</h3>
+                        <p class="text-gray-500">Premium tool to create professional QR codes with logos and custom frames.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://tools76.github.io/Image-convertor/" class="tool-item group" data-tags="image pdf converter jpg to png webp ico svg">
+                <div class="tool-card p-8 rounded-[2.5rem] border-b-4 border-indigo-500 gap-6">
                     <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #6366f1, #a855f7);">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
@@ -128,27 +147,27 @@
                     </div>
                     <div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-1">Elite Image/PDF Converter</h3>
-                        <p class="text-gray-500">ইমেজ থেকে পিডিএফ এবং সব ধরনের ফরম্যাটে কনভার্ট করার অল-ইন-ওয়ান টুল।</p>
+                        <p class="text-gray-500">All-in-one converter for Images to PDF and multiple graphic formats.</p>
                     </div>
                 </div>
             </a>
 
-            <a href="https://tools76.github.io/Thumbnail-downloader/" class="tool-item group" data-tags="thumbnail downloader channel analysis ইউটিউব থাম্বনেইল ডাউনলোড চ্যানেল এনালাইসিস">
-                <div class="tool-card p-8 rounded-[2.5rem] flex items-center gap-6 h-full">
-                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform">
+            <a href="https://tools76.github.io/Thumbnail-downloader/" class="tool-item group" data-tags="thumbnail downloader channel analysis youtube hd">
+                <div class="tool-card p-8 rounded-[2.5rem] border-b-4 border-red-500 gap-6">
+                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #ef4444, #f87171);">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                         </svg>
                     </div>
                     <div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-1">Thumbnail Analysis</h3>
-                        <p class="text-gray-500">HD থাম্বনেইল ডাউনলোড এবং চ্যানেলের গভীর বিশ্লেষণ।</p>
+                        <p class="text-gray-500">Download HD YouTube thumbnails and get deep channel analysis instantly.</p>
                     </div>
                 </div>
             </a>
 
-            <a href="https://tools76.github.io/image-resizer/" class="tool-item group" data-tags="image resizer photo compress ইমেজ রিসাইজার ফটো সাইজ কমানো">
-                <div class="tool-card p-8 rounded-[2.5rem] flex items-center gap-6 h-full border-b-4 border-blue-500">
+            <a href="https://tools76.github.io/image-resizer/" class="tool-item group" data-tags="image resizer photo compress optimize">
+                <div class="tool-card p-8 rounded-[2.5rem] border-b-4 border-blue-500 gap-6">
                     <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #10b981, #3b82f6);">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
@@ -156,7 +175,7 @@
                     </div>
                     <div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-1">Elite Image Resizer</h3>
-                        <p class="text-gray-500">পিক্সেল নিখুঁত রেখে ছবির সাইজ পরিবর্তন করার প্রো টুল।</p>
+                        <p class="text-gray-500">Professional tool to resize and optimize photos while maintaining pixel quality.</p>
                     </div>
                 </div>
             </a>

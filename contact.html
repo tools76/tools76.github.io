@@ -1,28 +1,95 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Nazrul Hub</title>
+    <title>Contact Us - Nazrul Tools</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap');
-        body { font-family: 'Hind Siliguri', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Hind+Siliguri:wght@400;700&display=swap');
+        body { font-family: 'Outfit', 'Hind Siliguri', sans-serif; background: #f0f4f8; color: #1e293b; }
+        .contact-card { background: white; border-radius: 2.5rem; border: 1px solid #e2e8f0; box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; }
+        .social-link { transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .social-link:hover { transform: translateY(-5px); }
+        .hidden { display: none; }
     </style>
 </head>
-<body class="bg-gray-50 p-6">
-    <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow text-center">
-        <h1 class="text-3xl font-bold text-blue-600 mb-6">Contact Us</h1>
-        <p class="text-gray-700 mb-6">আমাদের টুলস বা সার্ভিস নিয়ে আপনার কোনো প্রশ্ন বা পরামর্শ থাকলে সরাসরি যোগাযোগ করতে পারেন।</p>
-        
-        <div class="space-y-4">
-            <p><strong>নাম:</strong> নজরুল ইসলাম</p>
-            <p><strong>ইমেইল:</strong> amrshoppp@gmail.com</p>
-            <p><strong>অবস্থান:</strong> ছাতক, সিলেট, বাংলাদেশ।</p>
-            <p><strong>ইউটিউব:</strong> AMR Technology Nazrul</p>
+<body class="min-h-screen flex items-center justify-center p-4 py-12">
+
+    <div class="max-w-xl w-full contact-card overflow-hidden">
+        <div class="flex justify-end p-4 bg-slate-50 border-b border-slate-100">
+            <button id="toggleLang" onclick="switchLang()" class="bg-blue-600 text-white px-5 py-2 rounded-full text-xs font-bold shadow-lg hover:bg-blue-700 transition-all">
+                Translate to বাংলা
+            </button>
         </div>
-        
-        <a href="index.html" class="mt-8 inline-block text-blue-600 hover:underline">← ফিরে যান</a>
+
+        <div class="p-8 md:p-12 text-center">
+            
+            <div id="head-en">
+                <h1 class="text-4xl font-extrabold text-blue-600 mb-4">Get In Touch</h1>
+                <p class="text-slate-500 mb-10">Have questions or feedback? Feel free to contact me through any of the platforms below.</p>
+            </div>
+            <div id="head-bn" class="hidden">
+                <h1 class="text-4xl font-bold text-blue-600 mb-4">যোগাযোগ করুন</h1>
+                <p class="text-slate-500 mb-10">আমাদের টুলস নিয়ে আপনার কোনো প্রশ্ন বা পরামর্শ থাকলে নিচের প্ল্যাটফর্মগুলোর মাধ্যমে যোগাযোগ করতে পারেন।</p>
+            </div>
+
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-slate-800">Nazrul Islam</h2>
+                <p class="text-blue-500 font-medium">Founder of AMR SHOP & Nazrul Tools</p>
+                <p class="text-slate-400 text-sm mt-1">Chhatak, Sylhet, Bangladesh</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mb-10">
+                <a href="mailto:nazrulislam887441234@gmail.com" class="social-link p-6 bg-blue-50 rounded-3xl border border-blue-100 flex flex-col items-center">
+                    <span class="text-3xl mb-2">📧</span>
+                    <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">Email</span>
+                </a>
+                <a href="https://wa.me/8801727003670" target="_blank" class="social-link p-6 bg-green-50 rounded-3xl border border-green-100 flex flex-col items-center">
+                    <span class="text-3xl mb-2">💬</span>
+                    <span class="text-xs font-bold text-green-700 uppercase tracking-wider">WhatsApp</span>
+                </a>
+                <a href="https://youtube.com/@amr_technology_nazrul?si=CJ1cMX730DWcsZu9" target="_blank" class="social-link p-6 bg-red-50 rounded-3xl border border-red-100 flex flex-col items-center">
+                    <span class="text-3xl mb-2">🎥</span>
+                    <span class="text-xs font-bold text-red-700 uppercase tracking-wider">YouTube</span>
+                </a>
+                <a href="https://www.facebook.com/share/1EBZ2nirNW/" target="_blank" class="social-link p-6 bg-indigo-50 rounded-3xl border border-indigo-100 flex flex-col items-center">
+                    <span class="text-3xl mb-2">👤</span>
+                    <span class="text-xs font-bold text-indigo-700 uppercase tracking-wider">Facebook</span>
+                </a>
+            </div>
+
+            <div class="border-t border-slate-100 pt-8">
+                <a href="index.html" class="inline-flex items-center text-slate-400 hover:text-blue-600 font-bold transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    <span id="back-text">Back to Home</span>
+                </a>
+            </div>
+        </div>
     </div>
+
+    <script>
+        function switchLang() {
+            const hEn = document.getElementById('head-en');
+            const hBn = document.getElementById('head-bn');
+            const btn = document.getElementById('toggleLang');
+            const backText = document.getElementById('back-text');
+
+            if (hEn.classList.contains('hidden')) {
+                hEn.classList.remove('hidden');
+                hBn.classList.add('hidden');
+                btn.innerText = 'Translate to বাংলা';
+                backText.innerText = 'Back to Home';
+            } else {
+                hEn.classList.add('hidden');
+                hBn.classList.remove('hidden');
+                btn.innerText = 'Translate to English';
+                backText.innerText = 'হোম পেজে ফিরে যান';
+            }
+        }
+    </script>
+
 </body>
 </html>

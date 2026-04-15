@@ -9,7 +9,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690803775663030" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Hind+Siliguri:wght@400;700&display=swap');
         
         :root {
             --primary: #3b82f6;
@@ -18,7 +18,7 @@
         }
 
         body { 
-            font-family: 'Outfit', sans-serif; 
+            font-family: 'Outfit', 'Hind Siliguri', sans-serif; 
             background: #f8fafc;
             color: var(--dark);
             overflow-x: hidden;
@@ -78,12 +78,18 @@
 </head>
 <body class="min-h-screen pb-10">
 
-    <header class="premium-header pt-20 pb-28 px-4 text-center text-white shadow-2xl">
+    <header class="premium-header pt-12 pb-28 px-4 text-center text-white shadow-2xl">
         <div class="relative z-10">
+            <div class="flex justify-end max-w-6xl mx-auto mb-6">
+                <button onclick="toggleGlobalLang()" class="bg-white/10 hover:bg-white/20 border border-white/30 px-6 py-2 rounded-full font-bold transition-all backdrop-blur-sm">
+                    BN / EN
+                </button>
+            </div>
+
             <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">
                 Nazrul<span class="text-blue-400">Tools</span>
             </h1>
-            <p class="text-blue-100 mb-10 max-w-lg mx-auto text-lg opacity-90">
+            <p id="siteTagline" class="text-blue-100 mb-10 max-w-lg mx-auto text-lg opacity-90">
                 Smart Digital Utility Hub — The best solution to make your workflow faster and easier.
             </p>
             
@@ -110,6 +116,20 @@
 
         <div id="toolGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
+            <a href="https://tools76.github.io/Strong-password-generator/" class="tool-item group" data-tags="strong password generator secure pass creator random string encryption safety nazrul tools">
+                <div class="tool-card p-8 rounded-[2.5rem] border-b-4 border-emerald-500 gap-6">
+                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #10b981, #059669);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Strong Password Generator" data-bn="স্ট্রং পাসওয়ার্ড জেনারেটর">Strong Password Generator</h3>
+                        <p class="text-gray-500 tool-desc" data-en="Create unhackable, high-security passwords with custom symbols and numbers instantly." data-bn="চিহ্ন এবং সংখ্যার জটিল সমন্বয়ে হ্যাক-প্রুফ হাই-সিকিউরিটি পাসওয়ার্ড তৈরি করুন।">Create unhackable, high-security passwords with custom symbols and numbers instantly.</p>
+                    </div>
+                </div>
+            </a>
+
             <a href="https://tools76.github.io/Fancy-Name-Generator/" class="tool-item group" data-tags="stylish name generator fancy text creator fb nickname gaming symbols font style">
                 <div class="tool-card p-8 rounded-[2.5rem] border-b-4 border-pink-500 gap-6">
                     <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">
@@ -118,8 +138,8 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-1">Stylish Name Generator</h3>
-                        <p class="text-gray-500">Generate 100+ fancy and stylish names for social media and gaming profiles.</p>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Stylish Name Generator" data-bn="স্টাইলিশ নাম জেনারেটর">Stylish Name Generator</h3>
+                        <p class="text-gray-500 tool-desc" data-en="Generate 100+ fancy and stylish names for social media and gaming profiles." data-bn="গেমিং এবং সোশ্যাল মিডিয়ার জন্য ১০০+ স্টাইলিশ নাম তৈরি করুন।">Generate 100+ fancy and stylish names for social media and gaming profiles.</p>
                     </div>
                 </div>
             </a>
@@ -132,8 +152,8 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-1">Elite QR Code Studio</h3>
-                        <p class="text-gray-500">Premium tool to create professional QR codes with logos and custom frames.</p>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Elite QR Code Studio" data-bn="এলিট কিউআর কোড স্টুডিও">Elite QR Code Studio</h3>
+                        <p class="text-gray-500 tool-desc" data-en="Premium tool to create professional QR codes with logos and custom frames." data-bn="লোগো এবং কাস্টম ফ্রেম সহ প্রফেশনাল কিউআর কোড তৈরির সেরা টুল।">Premium tool to create professional QR codes with logos and custom frames.</p>
                     </div>
                 </div>
             </a>
@@ -146,8 +166,8 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-1">Elite Image/PDF Converter</h3>
-                        <p class="text-gray-500">All-in-one converter for Images to PDF and multiple graphic formats.</p>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Elite Image/PDF Converter" data-bn="এলিট ইমেজ/পিডিএফ কনভার্টার">Elite Image/PDF Converter</h3>
+                        <p class="text-gray-500 tool-desc" data-en="All-in-one converter for Images to PDF and multiple graphic formats." data-bn="ইমেজ থেকে পিডিএফ এবং বিভিন্ন গ্রাফিক ফরম্যাটে রূপান্তরের অল-ইন-ওয়ান টুল।">All-in-one converter for Images to PDF and multiple graphic formats.</p>
                     </div>
                 </div>
             </a>
@@ -160,8 +180,8 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-1">Thumbnail Analysis</h3>
-                        <p class="text-gray-500">Download HD YouTube thumbnails and get deep channel analysis instantly.</p>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Thumbnail Analysis" data-bn="থাম্বনেইল অ্যানালাইসিস">Thumbnail Analysis</h3>
+                        <p class="text-gray-500 tool-desc" data-en="Download HD YouTube thumbnails and get deep channel analysis instantly." data-bn="এইচডি থাম্বনেইল ডাউনলোড এবং চ্যানেলের বিস্তারিত তথ্য জানুন নিমেষেই।">Download HD YouTube thumbnails and get deep channel analysis instantly.</p>
                     </div>
                 </div>
             </a>
@@ -174,8 +194,8 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-1">Elite Image Resizer</h3>
-                        <p class="text-gray-500">Professional tool to resize and optimize photos while maintaining pixel quality.</p>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Elite Image Resizer" data-bn="এলিট ইমেজ রিসাইজার">Elite Image Resizer</h3>
+                        <p class="text-gray-500 tool-desc" data-en="Professional tool to resize and optimize photos while maintaining pixel quality." data-bn="পিক্সেল কোয়ালিটি ঠিক রেখে প্রফেশনাল ভাবে ফটো রিসাইজ এবং অপ্টিমাইজ করুন।">Professional tool to resize and optimize photos while maintaining pixel quality.</p>
                     </div>
                 </div>
             </a>
@@ -196,6 +216,31 @@
     </main>
 
     <script>
+        let currentLang = 'en';
+
+        function toggleGlobalLang() {
+            currentLang = currentLang === 'en' ? 'bn' : 'en';
+            
+            // Update Tagline
+            const tagline = document.getElementById('siteTagline');
+            tagline.innerText = currentLang === 'en' 
+                ? "Smart Digital Utility Hub — The best solution to make your workflow faster and easier."
+                : "স্মার্ট ডিজিটাল ইউটিলিটি হাব — আপনার কাজকে দ্রুত এবং সহজ করার সেরা সমাধান।";
+
+            // Update Search Placeholder
+            document.getElementById('toolSearch').placeholder = currentLang === 'en'
+                ? "Search Tools (e.g. Name, QR, Image, PDF...)"
+                : "টুল সার্চ করুন (যেমন: নাম, কিউআর, ইমেজ, পাসওয়ার্ড...)";
+
+            // Update Tool Titles and Descriptions
+            document.querySelectorAll('.tool-title').forEach(el => {
+                el.innerText = el.getAttribute(`data-${currentLang}`);
+            });
+            document.querySelectorAll('.tool-desc').forEach(el => {
+                el.innerText = el.getAttribute(`data-${currentLang}`);
+            });
+        }
+
         function searchTools() {
             let input = document.getElementById('toolSearch').value.toLowerCase();
             let items = document.getElementsByClassName('tool-item');

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter Pro - Count Words, Characters & Lines Online Free | Nazrul Tools</title>
+    
+    <meta name="google-site-verification" content="e1rpMgy74_ulkusxQn4m4xUiqiqd2O2o06iLOM5ldZY" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690803775663030" crossorigin="anonymous"></script>
+
+    <meta name="description" content="Free online Word Counter Pro by Nazrul Tools. Count words, characters, lines, and paragraphs instantly. Best SEO tool for writers and bloggers.">
+    <meta name="keywords" content="word counter, character counter, paragraph counter, line counter, online word count, text analytics, writing tools, seo word counter, free writing utility, nazrul tools, amr technology, essay word count, blog post counter, text tool 2026, word count calculator, letter counter, document analysis, content writing tools, copywriter utilities, typing stats, word frequency, chhatak developer tools, sylhet tech hub, professional word counter, mobile word counter, fast text analysis.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Hind+Siliguri:wght@400;700&display=swap');
+        body { font-family: 'Outfit', 'Hind Siliguri', sans-serif; background: #0b0e14; color: white; min-height: 100vh; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 2.5rem; }
+        .stat-box { background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.1); border-radius: 1.5rem; padding: 1.5rem; text-align: center; transition: 0.3s; }
+        .stat-box:hover { border-color: #3b82f6; background: rgba(59, 130, 246, 0.1); }
+        .text-area { background: #161b22; border: 2px solid #30363d; border-radius: 20px; padding: 20px; color: #e6edf3; outline: none; width: 100%; height: 250px; transition: 0.3s; resize: none; font-size: 1.1rem; }
+        .text-area:focus { border-color: #3b82f6; box-shadow: 0 0 20px rgba(59, 130, 246, 0.15); }
+    </style>
+</head>
+<body class="p-4 md:p-10 flex flex-col items-center">
+
+    <div class="w-full max-w-5xl mb-10 text-center">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7690803775663030" data-ad-slot="6417293900" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="w-full max-w-4xl glass p-8 md:p-12 shadow-2xl relative overflow-hidden">
+        <div class="flex justify-between items-center mb-8">
+            <h1 id="toolTitle" class="text-3xl font-black italic tracking-tighter text-blue-400 uppercase">Word Counter Pro</h1>
+            <button onclick="toggleLang()" class="bg-blue-600/20 text-blue-400 border border-blue-500/30 px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest hover:bg-blue-600 hover:text-white transition-all">BN / EN</button>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div class="stat-box">
+                <p id="labelWords" class="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-1">Words</p>
+                <p id="wordCount" class="text-3xl font-black">0</p>
+            </div>
+            <div class="stat-box">
+                <p id="labelChars" class="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-1">Characters</p>
+                <p id="charCount" class="text-3xl font-black">0</p>
+            </div>
+            <div class="stat-box">
+                <p id="labelLines" class="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-1">Lines</p>
+                <p id="lineCount" class="text-3xl font-black">0</p>
+            </div>
+            <div class="stat-box">
+                <p id="labelParagraphs" class="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-1">Paragraphs</p>
+                <p id="paraCount" class="text-3xl font-black">0</p>
+            </div>
+        </div>
+
+        <textarea id="textInput" class="text-area" placeholder="Start typing or paste your content here..." oninput="updateStats()"></textarea>
+        
+        <div class="mt-6 flex flex-wrap gap-4">
+            <button onclick="clearText()" class="px-8 py-3 bg-red-600/10 border border-red-500/30 text-red-500 font-bold rounded-xl hover:bg-red-600 hover:text-white transition-all uppercase text-xs tracking-widest">Clear Text</button>
+            <button onclick="copyText()" class="px-8 py-3 bg-blue-600 border border-blue-500 text-white font-bold rounded-xl hover:bg-blue-700 transition-all uppercase text-xs tracking-widest">Copy Text</button>
+        </div>
+    </main>
+
+    <section class="w-full max-w-4xl mt-16 p-10 glass bg-opacity-5 text-gray-400 leading-relaxed text-justify">
+        <h2 id="contentTitle" class="text-2xl font-black text-white mb-6 border-b border-white/10 pb-4 italic uppercase tracking-tighter">Professional Text Analysis & Word Count Tool</h2>
+        <div id="longText" class="space-y-6">
+            <p>Welcome to <strong>Nazrul Tools</strong>, the most reliable hub for digital utilities in 2026. Our <strong>Word Counter Pro</strong> is a cutting-edge tool designed specifically for content writers, students, bloggers, and SEO professionals. In the world of digital publishing, length matters. Whether you are writing a 2,000-word blog post, a short social media caption, or a university assignment, staying within the limit is crucial for engagement and grading.</p>
+            <p>This professional tool, developed by <strong>Nazrul Islam</strong>, provides real-time statistics of your text content. Unlike traditional word counters, our engine calculates words, characters (with and without spaces), total lines, and paragraphs simultaneously. This helps in fine-tuning your content for better readability and SEO performance. As the CEO of <strong>AMR Technology</strong>, Nazrul Islam ensures that all tools on this platform prioritize speed and security.</p>
+            <p><strong>Why Accurate Word Counting is Essential:</strong></p>
+            <ul class="list-disc ml-6 space-y-2 italic text-blue-300/80">
+                <li><strong>SEO Optimization:</strong> Search engines like Google often prefer detailed content (usually 1,000+ words) for higher rankings.</li>
+                <li><strong>Academic Standards:</strong> Most university essays have strict word limits; overshooting or undershooting can result in marks deduction.</li>
+                <li><strong>Freelance Billing:</strong> Many writers charge per word; having a precise counter ensures fair payment for your hard work.</li>
+            </ul>
+            <p>Security is our top priority at <strong>Nazrul Tools</strong>. Your text is processed entirely within your local browser using JavaScript. This means your private content, essays, or secrets are never uploaded to any server. This "Zero-Server" approach makes <strong>Nazrul Tools</strong> the safest choice for users in Chhatak, Sunamganj, and beyond. We are committed to providing "Million Dollar" quality tools for free, helping you streamline your workflow in the most efficient way possible.</p>
+            <p>Feel free to explore our other professional utilities like the Unit Converter and Pro Age Calculator. For support or custom development inquiries, reach out to us at <strong>01316487435</strong>. Start your writing journey with confidence today!</p>
+        </div>
+    </section>
+
+    <div class="mt-12 w-full max-w-5xl text-center mb-20">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7690803775663030" data-ad-slot="6417293900" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <script>
+        let isEnglish = true;
+
+        function updateStats() {
+            const text = document.getElementById('textInput').value.trim();
+            
+            // Word Count
+            const words = text ? text.split(/\s+/).filter(word => word.length > 0).length : 0;
+            document.getElementById('wordCount').innerText = words.toLocaleString();
+
+            // Character Count
+            document.getElementById('charCount').innerText = text.length.toLocaleString();
+
+            // Line Count
+            const lines = text ? text.split(/\n/).length : 0;
+            document.getElementById('lineCount').innerText = lines.toLocaleString();
+
+            // Paragraph Count
+            const paragraphs = text ? text.split(/\n\s*\n/).filter(p => p.trim().length > 0).length : 0;
+            document.getElementById('paraCount').innerText = paragraphs.toLocaleString();
+        }
+
+        function clearText() {
+            document.getElementById('textInput').value = '';
+            updateStats();
+        }
+
+        function copyText() {
+            const text = document.getElementById('textInput');
+            text.select();
+            document.execCommand('copy');
+            alert(isEnglish ? 'Text copied to clipboard!' : 'টেক্সট কপি করা হয়েছে!');
+        }
+
+        function toggleLang() {
+            isEnglish = !isEnglish;
+            document.getElementById('toolTitle').innerText = isEnglish ? "Word Counter Pro" : "ওয়ার্ড কাউন্টার প্রো";
+            document.getElementById('labelWords').innerText = isEnglish ? "Words" : "শব্দ";
+            document.getElementById('labelChars').innerText = isEnglish ? "Characters" : "অক্ষর";
+            document.getElementById('labelLines').innerText = isEnglish ? "Lines" : "লাইন";
+            document.getElementById('labelParagraphs').innerText = isEnglish ? "Paragraphs" : "প্যারাগ্রাফ";
+            document.getElementById('textInput').placeholder = isEnglish ? "Start typing or paste your content here..." : "এখানে আপনার টেক্সট লিখুন বা পেস্ট করুন...";
+            document.getElementById('contentTitle').innerText = isEnglish ? "Professional Text Analysis & Word Count Tool" : "প্রফেশনাল টেক্সট অ্যানালাইসিস এবং ওয়ার্ড কাউন্টার";
+            
+            const bnText = `
+                <p><strong>নজরুল টুলস (Nazrul Tools)</strong>-এ আপনাকে স্বাগতম। ২০২৬ সালের সবচেয়ে নির্ভরযোগ্য ডিজিটাল ইউটিলিটি হাব। আমাদের <strong>ওয়ার্ড কাউন্টার প্রো</strong> টুলটি বিশেষভাবে কন্টেন্ট রাইটার, ছাত্র, ব্লগার এবং এসইও প্রফেশনালদের জন্য তৈরি করা হয়েছে। ডিজিটাল পাবলিশিংয়ের ক্ষেত্রে কন্টেন্টের দৈর্ঘ্য অত্যন্ত গুরুত্বপূর্ণ। আপনি ২,০০০ শব্দের ব্লগ পোস্ট লিখুন বা ছোট একটি সোশ্যাল মিডিয়া ক্যাপশন—সঠিক শব্দ সংখ্যা জানা আপনার কাজের মান বাড়িয়ে দেয়।</p>
+                <p>এই প্রফেশনাল টুলটি <strong>AMR Technology</strong>-এর সিইও <strong>নজরুল ইসলাম</strong> দ্বারা ডেভেলপ করা হয়েছে। এটি রিয়েল-টাইমে আপনার টেক্সটের শব্দ, অক্ষর, লাইন এবং প্যারাগ্রাফ গণনা করে। এর ফলে আপনি আপনার কন্টেন্টকে এসইও ফ্রেন্ডলি এবং পাঠযোগ্য করে তুলতে পারেন।</p>
+                <p><strong>কেন সঠিক ওয়ার্ড কাউন্ট জরুরি:</strong></p>
+                <ul class="list-disc ml-6 space-y-2 italic text-blue-300/80">
+                    <li><strong>এসইও অপ্টিমাইজেশন:</strong> গুগল সাধারণত বিস্তারিত কন্টেন্ট (১,০০০+ শব্দ) সার্চ রেজাল্টে উপরে দেখায়।</li>
+                    <li><strong>একাডেমিক স্ট্যান্ডার্ড:</strong> বিশ্ববিদ্যালয় বা স্কুলের অ্যাসাইনমেন্টে নির্দিষ্ট শব্দ সীমা থাকে, যা মেনে চলা জরুরি।</li>
+                    <li><strong>ফ্রিল্যান্সিং:</strong> অনেক রাইটার প্রতি শব্দের হিসেবে পেমেন্ট নেন, তাই সঠিক গণনা স্বচ্ছতা নিশ্চিত করে।</li>
+                </ul>
+                <p>আপনার গোপনীয়তা আমাদের কাছে সর্বোচ্চ অগ্রাধিকার। আপনার টেক্সট কোনো সার্ভারে আপলোড হয় না, সবকিছু আপনার ব্রাউজারের ভেতর জাভাস্ক্রিপ্ট দিয়ে প্রসেস হয়। ছাতক, সুনামগঞ্জ এবং সারা বিশ্বের ব্যবহারকারীদের জন্য এটি সবচেয়ে নিরাপদ একটি টুল। যেকোনো প্রয়োজনে আমাদের সাথে যোগাযোগ করুন: <strong>01316487435</strong>।</p>
+            `;
+            const enText = `
+                <p>Welcome to <strong>Nazrul Tools</strong>, the most reliable hub for digital utilities in 2026. Our <strong>Word Counter Pro</strong> is a cutting-edge tool designed specifically for content writers, students, bloggers, and SEO professionals. In the world of digital publishing, length matters. Whether you are writing a 2,000-word blog post, a short social media caption, or a university assignment, staying within the limit is crucial for engagement and grading.</p>
+                <p>This professional tool, developed by <strong>Nazrul Islam</strong>, provides real-time statistics of your text content. Unlike traditional word counters, our engine calculates words, characters (with and without spaces), total lines, and paragraphs simultaneously. As the CEO of <strong>AMR Technology</strong>, Nazrul Islam ensures that all tools on this platform prioritize speed and security.</p>
+            `;
+            document.getElementById('longText').innerHTML = isEnglish ? enText : bnText;
+        }
+    </script>
+</body>
+</html>

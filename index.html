@@ -5,16 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nazrul Tools - All In One</title>
     
+    <style>
+        html { visibility: hidden; opacity: 0; }
+    </style>
+
     <meta name="description" content="Nazrul Tools is a comprehensive premium digital utility hub offering 7+ professional tools including Pro Age Calculator, Strong Password Generator, Stylish Name Creator, Elite QR Code Studio, Image to PDF Converter, YouTube Thumbnail Analysis, and Photo Resizer. Our platform provides high-quality, fast, and secure digital solutions for developers, designers, and daily users. No login required, 100% free, and mobile-friendly. Trusted by thousands in Bangladesh and worldwide. Managed by CEO Nazrul Islam.">
     <meta name="keywords" content="Nazrul Tools, Age Calculator, Password Generator, QR Code Generator, Image Converter, YouTube Thumbnail Downloader, Image Resizer, Stylish Name Generator, Digital Tools, Online Utilities, Free Web Tools, SEO Tools, Developer Tools, Nazrul Islam Tools, Chhatak Tech, Bangladesh Software, Fast Age Calculator, Secure Password, PDF Converter, JPG to PNG, WebP Converter, 4K Thumbnail, Gaming Name Style, FB Nickname, Professional QR, Custom QR with Logo, Photo Compressor, Bulk Image Resize, Daily Life Tools, Smart Utilities, Web App 2026, Best Free Tools, No Login Tools, Privacy Friendly, Tech Solutions, Nazrul Enterprise, AMR Technology, Online Calculator, Time Duration Tool, Life Stats, Secure Encryption, Random String, Tech Tutorials, Mobile Optimization, Chorerbond Tech, Sunamganj Developer, Full Stack Tools, Graphics Design Utilities.">
     <meta name="author" content="Nazrul Tools">
     
     <meta name="google-site-verification" content="e1rpMgy74_ulkusxQn4m4xUiqiqd2O2o06iLOM5ldZY" />
     <meta name="google-adsense-account" content="ca-pub-7690803775663030">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690803775663030" crossorigin="anonymous"></script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'Hind Siliguri', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690803775663030" crossorigin="anonymous"></script>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Hind+Siliguri:wght@400;700&display=swap');
+        
+        /* ডিজাইন লোড হওয়ার পর বডি দেখানোর নিয়ম */
+        html.loaded { visibility: visible; opacity: 1; transition: opacity 0.3s ease-in; }
+
         :root { --primary: #3b82f6; --accent: #6366f1; --dark: #0f172a; }
         body { font-family: 'Outfit', 'Hind Siliguri', sans-serif; background: #f8fafc; color: var(--dark); overflow-x: hidden; }
         .premium-header { background: radial-gradient(circle at top right, #2563eb, #000); position: relative; overflow: hidden; }
@@ -26,9 +48,15 @@
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .animate-fade { animation: fadeIn 0.5s ease forwards; }
     </style>
+    
+    <script>
+        // পেজ পুরোপুরি লোড হলে ডিজাইন দেখাবে
+        window.addEventListener('DOMContentLoaded', (event) => {
+            document.documentElement.classList.add('loaded');
+        });
+    </script>
 </head>
 <body class="min-h-screen pb-10">
-
     <header class="premium-header pt-12 pb-28 px-4 text-center text-white shadow-2xl">
         <div class="relative z-10">
             <div class="flex justify-end max-w-6xl mx-auto mb-6">

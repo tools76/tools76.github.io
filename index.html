@@ -6,7 +6,9 @@
     <title>Ultimate Tools - All In One</title>
     
     <style>
-        html { visibility: hidden; opacity: 0; }
+        /* শুরুতে ডিজাইন ভেঙে যাওয়া রোধ করতে বডি হাইড করা, তবে খুব দ্রুত দেখানোর লজিক সহ */
+        body { opacity: 0; transition: opacity 0.3s ease-in; }
+        body.loaded { opacity: 1; }
     </style>
 
     <meta name="description" content="Ultimate Tools is a comprehensive premium digital utility hub offering 7+ professional tools including Pro Age Calculator, Strong Password Generator, Stylish Name Creator, Elite QR Code Studio, Image to PDF Converter, YouTube Thumbnail Analysis, and Photo Resizer. Our platform provides high-quality, fast, and secure digital solutions for developers, designers, and daily users. No login required, 100% free, and mobile-friendly.">
@@ -34,9 +36,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Hind+Siliguri:wght@400;700&display=swap');
         
-        /* ডিজাইন লোড হওয়ার পর বডি দেখানোর নিয়ম */
-        html.loaded { visibility: visible; opacity: 1; transition: opacity 0.3s ease-in; }
-
         :root { --primary: #3b82f6; --accent: #6366f1; --dark: #0f172a; }
         body { font-family: 'Outfit', 'Hind Siliguri', sans-serif; background: #f8fafc; color: var(--dark); overflow-x: hidden; }
         .premium-header { background: radial-gradient(circle at top right, #2563eb, #000); position: relative; overflow: hidden; }
@@ -50,10 +49,14 @@
     </style>
     
     <script>
-        // পেজ পুরোপুরি লোড হলে ডিজাইন দেখাবে
-        window.addEventListener('DOMContentLoaded', (event) => {
-            document.documentElement.classList.add('loaded');
+        // DOMContentLoaded ব্যবহার করা হয়েছে যাতে ডিজাইন পাওয়ার সাথে সাথেই কন্টেন্ট দেখা যায়
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('loaded');
         });
+        // ব্যাকআপ হিসেবে উইন্ডো লোড হওয়ার ফোরব্যাক লজিক
+        window.onload = () => {
+            document.body.classList.add('loaded');
+        };
     </script>
 </head>
 <body class="min-h-screen pb-10">

@@ -1,63 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://tools76.github.io/</loc>
-    <lastmod>2026-04-15</lastmod>
-    <priority>1.00</priority>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://tools76.github.io/age-calculator/</loc>
-    <lastmod>2026-04-15</lastmod>
-    <priority>0.90</priority>
+    <loc>https://tools76.github.io/word.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://tools76.github.io/Strong-password-generator/</loc>
-    <lastmod>2026-04-15</lastmod>
-    <priority>0.85</priority>
+    <loc>https://tools76.github.io/typing-speed.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://tools76.github.io/Fancy-Name-Generator/</loc>
-    <lastmod>2026-04-15</lastmod>
-    <priority>0.85</priority>
+    <loc>https://tools76.github.io/age-calculator.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://tools76.github.io/qrcodegenarator/</loc>
-    <lastmod>2026-04-15</lastmod>
-    <priority>0.85</priority>
+    <loc>https://tools76.github.io/strong-password.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://tools76.github.io/Image-convertor/</loc>
-    <lastmod>2026-04-15</lastmod>
-    <priority>0.85</priority>
+    <loc>https://tools76.github.io/stylish-name.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://tools76.github.io/Thumbnail-downloader/</loc>
-    <lastmod>2026-04-15</lastmod>
-    <priority>0.85</priority>
+    <loc>https://tools76.github.io/qr-code.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://tools76.github.io/image-resizer/</loc>
-    <lastmod>2026-04-15</lastmod>
-    <priority>0.85</priority>
+    <loc>https://tools76.github.io/image-converter.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://tools76.github.io/image-resizer.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://tools76.github.io/privacy-policy.html</loc>
-    <lastmod>2026-04-15</lastmod>
-    <priority>0.70</priority>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
+
   <url>
     <loc>https://tools76.github.io/termsandcondition.html</loc>
-    <lastmod>2026-04-15</lastmod>
-    <priority>0.70</priority>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
+
   <url>
     <loc>https://tools76.github.io/contact.html</loc>
-    <lastmod>2026-04-15</lastmod>
-    <priority>0.70</priority>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
+
   <url>
-    <loc>https://tools76.github.io/developer.html</loc>
-    <lastmod>2026-04-15</lastmod>
-    <priority>0.70</priority>
+    <loc>https://tools76.github.io/about.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
+
 </urlset>

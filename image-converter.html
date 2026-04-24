@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Image Converter Online – JPG, PNG, WEBP, PDF & ICO</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690803775663030" crossorigin="anonymous"></script>
+    <meta name="google-site-verification" content="e1rpMgy74_ulkusxQn4m4xUiqiqd2O2o06iLOM5ldZY"/>
+    <meta name="description" content="Free online Image & PDF converter. Convert JPG, PNG, WEBP, ICO and PDF files instantly in your browser without uploading."/>
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Free Image Converter Online">
+<meta property="og:description" content="Convert JPG, PNG, WEBP, PDF & ICO instantly in your browser.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="https://i.ibb.co.com/gbjYBRqg/20260424-120505.png">
+<link rel="canonical" href="https://tools76.github.io/image-converter.html">
+    <style>
+        /* ফাকা জায়গা চিরতরে বন্ধ করার জন্য */
+        * { margin: 0 !important; padding: 0 !important; box-sizing: border-box !important; }
+        html, body { width: 100%; height: 100%; background: #f0f2f5; display: block !important; }
+
+        header { 
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%); 
+            color: white; 
+            padding: 30px 15px !important; 
+            text-align: center; 
+            border-bottom: 4px solid #ffca28;
+        }
+
+        /* এই টেক্সট বক্সটি এখন গ্যাপের ভেতরে থাকবে */
+        .top-intro { 
+            background: rgba(255, 255, 255, 0.1); 
+            color: #e3f2fd;
+            padding: 20px !important; 
+            margin: 10px auto !important;
+            max-width: 800px;
+            font-size: 14px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: justify;
+        }
+
+        .container { 
+            width: 100%; 
+            max-width: 850px; 
+            margin: 0 auto !important; 
+            padding: 15px !important; 
+            display: block !important;
+        }
+
+        .converter-card { 
+            background: white; 
+            padding: 25px !important; 
+            border-radius: 15px; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+            text-align: center;
+            margin-top: 0 !important; /* কোনো গ্যাপ রাখা যাবে না */
+        }
+
+        #dropZone { 
+            border: 3px dashed #1e88e5; 
+            background: #f1f8ff; 
+            padding: 35px 15px !important; 
+            border-radius: 12px; 
+            cursor: pointer; 
+        }
+
+        select { 
+            width: 100%; padding: 14px !important; border: 2px solid #1e88e5; 
+            border-radius: 8px; font-weight: bold; margin: 15px 0 !important; outline: none;
+        }
+        #convertBtn { 
+            width: 100%; padding: 16px !important; background: #1a237e; color: white; 
+            font-size: 17px; font-weight: 900; border: none; border-radius: 8px; 
+            cursor: pointer; text-transform: uppercase;
+        }
+
+        .content-area { 
+            background: white; padding: 30px !important; border-radius: 15px; 
+            margin-top: 20px !important; text-align: justify;
+        }
+
+        footer { background: #1a237e; color: white; padding: 25px !important; text-align: center; margin-top: 30px !important; }
+        #previewImg { max-height: 140px; margin: 10px auto !important; display: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ELITE FILE CONVERTER</h1>
+    <p>Professional Secure Processing Engine 2026</p>
+    
+    <div class="top-intro">
+        Welcome to the <strong>Elite Image & PDF Converter Pro</strong>, the most reliable and high-speed multimedia processing engine available in 2026. This professional tool is specifically engineered to handle complex file transitions without compromising your data privacy. We understand the importance of your time, which is why our engine runs entirely on your local hardware, ensuring lightning-fast conversion speeds that traditional cloud-based tools simply cannot match. Whether you are optimizing images for a web project, preparing professional PDF documents, or creating website favicons, our interface provides a seamless experience. Start by dragging your files below and witness the power of modern serverless technology right in your browser.
+    </div>
+</header>
+
+<div class="container">
+    <div class="converter-card">
+        <div id="dropZone">
+            <input type="file" id="fileInput" style="display: none;" accept="image/*,application/pdf">
+            <div id="uploadUi">
+                <span style="font-size: 45px;">📂</span>
+                <h2 style="margin-top: 10px !important; font-weight: 800; color: #0d47a1;">SELECT IMAGE OR PDF</h2>
+                <p style="font-size: 13px; color: #666; margin-top: 5px !important;">Tap to upload or Drag & Drop</p>
+            </div>
+            <div id="fileInfo" style="display: none;">
+                <img id="previewImg">
+                <div id="pdfIcon" style="font-size: 55px; display: none;">📄</div>
+                <p id="fileName" style="font-weight: bold; color: #1e88e5; margin-top: 8px !important; font-size: 14px;"></p>
+            </div>
+        </div>
+
+        <div id="formatSection" style="display: none;">
+            <select id="outputFormat">
+                <option value="jpeg">Convert to JPG</option>
+                <option value="png">Convert to PNG</option>
+                <option value="pdf">Convert to PDF</option>
+                <option value="webp">Convert to WEBP</option>
+                <option value="ico">Convert to ICO</option>
+            </select>
+            <button id="convertBtn">Process & Download Now ✨</button>
+        </div>
+    </div>
+
+    <article class="content-area">
+        <h2 style="color: #1a237e; margin-bottom: 15px !important; font-size: 20px;">Advanced File Conversion for the Modern Web</h2>
+        <p style="margin-bottom: 12px !important;">In the digital landscape of 2026, managing multimedia assets effectively is no longer just a luxury—it's a necessity. Our converter is built to cater to the growing demands of web developers, graphics designers, and digital entrepreneurs who require precision and speed. The transition between high-resolution photography and web-optimized formats can make or break a user's experience on any platform.</p>
+
+        <p style="margin-bottom: 12px !important;">When you convert an image to <strong>WEBP</strong>, you are utilizing Google's advanced compression algorithm which provides superior lossless and lossy compression for images on the web. This results in significantly faster page loads, which is a key factor in search engine optimization (SEO) and user retention. Our tool ensures that these technical hurdles are handled automatically, allowing you to focus on your creative work.</p>
+
+        <p style="margin-bottom: 12px !important;">Security remains our top priority. Most online tools require you to upload your files to a remote server, creating a potential risk for sensitive documents. However, <strong>Elite Studio Pro</strong> utilizes a unique client-side processing model. Your images and PDFs are converted using high-performance JavaScript within your own browser. This means your files never leave your device, offering you a level of confidentiality that is unparalleled in the industry.</p>
+
+        <p style="margin-bottom: 12px !important;">Our PDF engine is equally robust. Converting multiple image files into a single <strong>PDF document</strong> is essential for professional presentations, academic assignments, and corporate reporting. By using our tool, you ensure that your documents maintain their formatting and visual integrity across all devices and operating systems. We also support specialized formats like <strong>ICO</strong>, which is critical for web developers looking to create custom favicons that enhance brand identity.</p>
+
+        <p style="margin-bottom: 12px !important;">As technology continues to advance, Elite Digital Studio is committed to providing world-class digital tools. We believe that professional-grade software should be accessible to everyone without the need for expensive subscriptions. Our 2026 update marks a significant milestone in our journey toward creating a faster, safer, and more efficient digital world for all creators.</p>
+    </article>
+</div>
+
+<footer>
+    <p>© 2026 Elite Digital Studio | Chhatak, Bangladesh</p>
+</footer>
+
+<script>
+    const fileInput = document.getElementById('fileInput');
+    const dropZone = document.getElementById('dropZone');
+    const fileInfo = document.getElementById('fileInfo');
+    const uploadUi = document.getElementById('uploadUi');
+    const previewImg = document.getElementById('previewImg');
+    const pdfIcon = document.getElementById('pdfIcon');
+    const formatSection = document.getElementById('formatSection');
+    const outputFormat = document.getElementById('outputFormat');
+
+    dropZone.onclick = () => fileInput.click();
+
+    fileInput.onchange = (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        uploadUi.style.display = 'none';
+        fileInfo.style.display = 'block';
+        formatSection.style.display = 'block';
+        document.getElementById('fileName').innerText = file.name;
+
+        if (file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = (ev) => {
+                previewImg.src = ev.target.result;
+                previewImg.style.display = 'block';
+                pdfIcon.style.display = 'none';
+            };
+            reader.readAsDataURL(file);
+        } else if (file.type === 'application/pdf') {
+            previewImg.style.display = 'none';
+            pdfIcon.style.display = 'block';
+        }
+    };
+
+    document.getElementById('convertBtn').onclick = () => {
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            localStorage.setItem('originalFile', e.target.result);
+            localStorage.setItem('targetFormat', outputFormat.value);
+            localStorage.setItem('fileName', file.name.split('.')[0]);
+            window.location.href = 'image-converterdownload.html';
+        };
+        reader.readAsDataURL(file);
+    };
+</script>
+
+</body>
+</html>

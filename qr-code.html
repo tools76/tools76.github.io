@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qr Code Generator Free</title>
+    
+    <meta name="google-site-verification" content="ByykX6qaniRV46wT76IzXF1ibuTM_aa8Ylof0NFcOWY" />
+    <meta name="description" content="Generate high-resolution branded QR codes with logos and professional frames. Safe, secure, and permanent QR code generator for businesses and creators.">
+    <meta name="keywords" content="QR Code Generator, Custom QR Studio, Branded QR Code, Professional QR Creator, QR with Logo, QR code frames, high resolution QR PNG, 2026 QR technology">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690803775663030" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Hind+Siliguri:wght@400;700&display=swap');
+        
+        :root {
+            --bg-light: #f8fafc;
+            --accent: #2563eb;
+            --qr-color: #2563eb;
+        }
+
+        body { 
+            font-family: 'Outfit', 'Hind Siliguri', sans-serif; 
+            background: var(--bg-light); 
+            color: #1e293b; 
+            min-height: 100vh;
+        }
+
+        /* গ্লোয়িং টেক্সট ইফেক্ট */
+        .glow-text {
+            color: #1d4ed8;
+            text-shadow: 0 0 10px rgba(37, 99, 235, 0.2), 0 0 20px rgba(37, 99, 235, 0.1);
+            font-weight: 800;
+        }
+
+        .hero-title {
+            background: linear-gradient(to right, #1e40af, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.1));
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            border-radius: 2.5rem;
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
+        }
+
+        .input-box {
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+        .input-box:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 15px rgba(37, 99, 235, 0.1);
+        }
+
+        .frame-option {
+            cursor: pointer;
+            transition: 0.3s;
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+        }
+        .frame-option.active {
+            border-color: #2563eb;
+            background: #eff6ff;
+            transform: scale(1.05);
+        }
+
+        /* QR Frame Styles */
+        .frame-1 { border: 12px solid var(--qr-color); padding: 25px; border-radius: 25px; }
+        .frame-2 { border: 6px dashed var(--qr-color); padding: 25px; border-radius: 50%; }
+        .frame-3 { border-left: 20px solid var(--qr-color); padding: 25px; background: white; }
+        .frame-4 { outline: 10px double var(--qr-color); outline-offset: 12px; padding: 12px; }
+        .frame-5 { border: 12px solid var(--qr-color); border-radius: 0 50px 0 50px; padding: 25px; }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            box-shadow: 0 15px 35px -10px rgba(37, 99, 235, 0.3);
+            transition: all 0.4s;
+        }
+        .btn-gradient:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.5);
+        }
+
+        .seo-content h2, .seo-content h3 { color: #1e40af; margin-top: 1.5rem; font-weight: 800; }
+        .seo-content p { margin-bottom: 1rem; line-height: 1.8; color: #334155; text-align: justify; }
+    </style>
+</head>
+<body class="py-10 px-4">
+
+    <div class="max-w-6xl mx-auto">
+        <header class="text-center mb-16">
+            <h1 class="text-5xl md:text-8xl font-black hero-title mb-4 tracking-tighter uppercase italic">QR STUDIO <span class="glow-text">PRO</span></h1>
+            <p class="text-slate-500 font-bold text-lg uppercase tracking-widest">Elite Custom QR Generator for Modern Branding</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <div class="lg:col-span-5 space-y-8">
+                <div class="glass-panel p-8 space-y-6">
+                    <div class="space-y-2">
+                        <label class="block text-xs font-black text-blue-600 uppercase tracking-widest ml-1">1. Content / Link</label>
+                        <input type="text" id="qrText" class="input-box w-full p-5 rounded-2xl outline-none font-bold text-slate-700" placeholder="https://example.com">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-xs font-black text-blue-600 uppercase tracking-widest ml-1">2. QR Color</label>
+                            <input type="color" id="qrColor" value="#2563eb" class="w-full h-14 bg-white border border-slate-200 rounded-2xl cursor-pointer p-1">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-xs font-black text-blue-600 uppercase tracking-widest ml-1">3. Brand Logo</label>
+                            <input type="file" id="logoInput" accept="image/*" class="hidden">
+                            <button onclick="document.getElementById('logoInput').click()" class="w-full h-14 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-2xl text-[10px] font-black uppercase transition text-slate-500">Upload Icon</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8">
+                    <label class="block text-xs font-black text-blue-600 mb-6 text-center uppercase tracking-widest">4. Select Premium Frame</label>
+                    <div class="grid grid-cols-3 gap-4" id="frameList">
+                        <div onclick="selectFrame(0, this)" class="frame-option active py-4 rounded-xl flex items-center justify-center text-[10px] font-black uppercase tracking-tighter">Minimal</div>
+                        <div onclick="selectFrame(1, this)" class="frame-option py-4 rounded-xl flex items-center justify-center text-[10px] font-black uppercase tracking-tighter">Classic</div>
+                        <div onclick="selectFrame(2, this)" class="frame-option py-4 rounded-xl flex items-center justify-center text-[10px] font-black uppercase tracking-tighter">Modern</div>
+                        <div onclick="selectFrame(3, this)" class="frame-option py-4 rounded-xl flex items-center justify-center text-[10px] font-black uppercase tracking-tighter">Bordered</div>
+                        <div onclick="selectFrame(4, this)" class="frame-option py-4 rounded-xl flex items-center justify-center text-[10px] font-black uppercase tracking-tighter">Double</div>
+                        <div onclick="selectFrame(5, this)" class="frame-option py-4 rounded-xl flex items-center justify-center text-[10px] font-black uppercase tracking-tighter">Artistic</div>
+                    </div>
+                </div>
+
+                <button onclick="generateQR()" class="btn-gradient w-full py-6 rounded-[2rem] font-black text-2xl text-white uppercase tracking-[0.2em]">Generate QR ✨</button>
+            </div>
+
+            <div class="lg:col-span-7 flex flex-col items-center">
+                <div class="glass-panel p-10 md:p-16 w-full flex flex-col items-center justify-center min-h-[550px] relative">
+                    <div id="capture-area" class="bg-white p-10 rounded-3xl relative shadow-2xl transition-all duration-500">
+                        <div id="qrcode-container">
+                            <div id="qrcode"></div>
+                        </div>
+                        <img id="logo-preview" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-2xl hidden border-4 border-white shadow-xl bg-white object-contain">
+                    </div>
+                    
+                    <div id="download-section" class="mt-12 hidden">
+                        <button onclick="downloadQR()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-16 py-5 rounded-2xl font-black text-xl shadow-xl transition-all uppercase tracking-widest">Download PNG</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <article class="mt-20 glass-panel p-10 md:p-16 seo-content">
+            <h2 class="text-3xl font-black text-blue-900 mb-8 uppercase italic tracking-tight glow-text">Professional QR Code Technology for Branding</h2>
+            <p>
+                In the digital age, a QR code is more than just a functional tool—it is a bridge between the physical and digital worlds. <strong>QR Studio Pro</strong> is designed to elevate your brand presence by offering sophisticated customization options that go far beyond standard black-and-white patterns. This studio empowers creators and business owners globally to generate high-resolution, secure, and stylish QR codes.
+            </p>
+            <p>
+                Our professional studio allows you to integrate your own <strong>brand logo</strong> directly into the center of the code, ensuring that your customers recognize your brand even before they scan. Choosing a custom QR code tailored to your corporate identity can significantly increase user engagement and trust.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+                <div class="p-8 bg-blue-50 rounded-3xl border border-blue-100">
+                    <h3 class="text-blue-700 font-extrabold text-xl mb-3 uppercase tracking-tighter">High Resolution Output</h3>
+                    <p class="text-sm font-semibold text-slate-600">Download ultra-high resolution QR codes, perfect for business cards, billboards, and high-quality digital displays.</p>
+                </div>
+                <div class="p-8 bg-purple-50 rounded-3xl border border-purple-100">
+                    <h3 class="text-purple-700 font-extrabold text-xl mb-3 uppercase tracking-tighter">Zero-Knowledge Security</h3>
+                    <p class="text-sm font-semibold text-slate-600">Our static QR codes are permanent and direct, ensuring no hidden redirects or tracking for maximum user safety.</p>
+                </div>
+            </div>
+
+            <p>
+                One of the standout features of <strong>QR Studio Pro</strong> is our <strong>Premium Framing System</strong>. We offer unique geometric frames that wrap around your code, providing a professional finished look that fits perfectly in modern UI designs. Whether you want a minimal border or an artistic double-lined frame, our rendering engine ensures every pixel is perfectly aligned for scanning.
+            </p>
+        </article>
+
+        <footer class="mt-20 text-center pb-10">
+            <div class="flex flex-wrap justify-center gap-8 text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 mb-8">
+                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                <a href="strong-password.html" class="hover:text-blue-600 transition">Password App</a>
+                <a href="age-calculator.html" class="hover:text-blue-600 transition">Age App</a>
+            </div>
+            <p class="text-blue-900 text-[10px] font-bold uppercase tracking-[0.5em] opacity-40">
+                © 2026 Elite Web Utilities • Professional Tech Environment
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        let currentFrame = 0;
+        let qrColor = "#2563eb";
+        const qrcodeDiv = document.getElementById("qrcode");
+        const logoPreview = document.getElementById("logo-preview");
+        const captureArea = document.getElementById("capture-area");
+
+        document.getElementById('logoInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    logoPreview.src = event.target.result;
+                    logoPreview.classList.remove('hidden');
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function selectFrame(index, el) {
+            currentFrame = index;
+            document.querySelectorAll('.frame-option').forEach(f => f.classList.remove('active'));
+            el.classList.add('active');
+            updateFrameUI();
+        }
+
+        function updateFrameUI() {
+            const color = document.getElementById('qrColor').value;
+            captureArea.style.setProperty('--qr-color', color);
+            captureArea.className = "bg-white p-10 rounded-3xl relative transition-all duration-500 shadow-2xl";
+            if(currentFrame > 0) captureArea.classList.add(`frame-${currentFrame}`);
+        }
+
+        function generateQR() {
+            const text = document.getElementById("qrText").value;
+            if (!text) return alert("Please enter a link or text!");
+
+            qrColor = document.getElementById('qrColor').value;
+            qrcodeDiv.innerHTML = "";
+            
+            new QRCode(qrcodeDiv, {
+                text: text,
+                width: 320,
+                height: 320,
+                colorDark: qrColor,
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+
+            updateFrameUI();
+            document.getElementById("download-section").classList.remove("hidden");
+            captureArea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function downloadQR() {
+            html2canvas(captureArea, { 
+                backgroundColor: null, 
+                scale: 3, 
+                useCORS: true 
+            }).then(canvas => {
+                const link = document.createElement("a");
+                link.download = "Branded-QR-Code.png";
+                link.href = canvas.toDataURL("image/png");
+                link.click();
+            });
+        }
+    </script>
+</body>
+</html>

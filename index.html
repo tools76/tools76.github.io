@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>CHHATAK Tools 76- ALL In One</title>
+    <title>Ultimate Tools - Premium All-in-One Digital Utilities</title>
     
     <style>
-        /* শুরুতে ডিজাইন ভেঙে যাওয়া রোধ করতে বডি হাইড করা, তবে খুব দ্রুত দেখানোর লজিক সহ */
         body { opacity: 0; transition: opacity 0.3s ease-in; }
         body.loaded { opacity: 1; }
     </style>
 
-    <meta name="description" content="CHHATAK Tools is a comprehensive premium digital utility hub offering 7+ professional tools including Pro Age Calculator, Strong Password Generator, Stylish Name Creator, Elite QR Code Studio, Image to PDF Converter, YouTube Thumbnail Analysis, and Photo Resizer. Our platform provides high-quality, fast, and secure digital solutions for developers, designers, and daily users. No login required, 100% free, and mobile-friendly.">
-    <meta name="keywords" content="Age Calculator, Password Generator, QR Code Generator, Image Converter, YouTube Thumbnail Downloader, Image Resizer, Stylish Name Generator, Digital Tools, Online Utilities, Free Web Tools, SEO Tools, Developer Tools, Fast Age Calculator, Secure Password, PDF Converter, JPG to PNG, WebP Converter, 4K Thumbnail, Gaming Name Style, FB Nickname, Professional QR, Custom QR with Logo, Photo Compressor, Bulk Image Resize, Daily Life Tools, Smart Utilities, Web App 2026, Best Free Tools, No Login Tools, Privacy Friendly, Tech Solutions, Online Calculator, Time Duration Tool, Life Stats, Secure Encryption, Random String, Tech Tutorials, Mobile Optimization, Full Stack Tools, Graphics Design Utilities.">
-    <meta name="author" content="CHHATAK Tools">
+    <meta name="description" content="Ultimate Tools offers professional digital utilities including Age Calculator, Word Counter, Typing Speed Tester, Password Generator, and Image Resizer. 100% Secure and Free.">
+    <meta name="author" content="Ultimate Tools">
     
     <meta name="google-site-verification" content="e1rpMgy74_ulkusxQn4m4xUiqiqd2O2o06iLOM5ldZY" />
     <meta name="google-adsense-account" content="ca-pub-7690803775663030">
@@ -36,47 +34,35 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Hind+Siliguri:wght@400;700&display=swap');
-        
         :root { --primary: #3b82f6; --accent: #6366f1; --dark: #0f172a; }
         body { font-family: 'Outfit', 'Hind Siliguri', sans-serif; background: #f8fafc; color: var(--dark); overflow-x: hidden; }
         .premium-header { background: radial-gradient(circle at top right, #2563eb, #000); position: relative; overflow: hidden; }
         .premium-header::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); opacity: 0.1; }
         .tool-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.4); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); height: 100%; display: flex; align-items: center; }
         .tool-card:hover { transform: translateY(-10px) scale(1.02); background: #ffffff; border-color: var(--primary); box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25); }
-        .search-container { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); }
-        .icon-box { background: linear-gradient(135deg, var(--primary), var(--accent)); box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.5); flex-shrink: 0; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .search-container { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+        .icon-box { background: linear-gradient(135deg, var(--primary), var(--accent)); flex-shrink: 0; }
         .animate-fade { animation: fadeIn 0.5s ease forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
     
     <script>
-        // DOMContentLoaded ব্যবহার করা হয়েছে যাতে ডিজাইন পাওয়ার সাথে সাথেই কন্টেন্ট দেখা যায়
-        document.addEventListener('DOMContentLoaded', () => {
-            document.body.classList.add('loaded');
-        });
-        // ব্যাকআপ হিসেবে উইন্ডো লোড হওয়ার ফোরব্যাক লজিক
-        window.onload = () => {
-            document.body.classList.add('loaded');
-        };
+        document.addEventListener('DOMContentLoaded', () => { document.body.classList.add('loaded'); });
     </script>
 </head>
 <body class="min-h-screen pb-10">
     <header class="premium-header pt-12 pb-28 px-4 text-center text-white shadow-2xl">
         <div class="relative z-10">
             <div class="flex justify-end max-w-6xl mx-auto mb-6">
-                <button onclick="toggleGlobalLang()" class="bg-white/10 hover:bg-white/20 border border-white/30 px-6 py-2 rounded-full font-bold transition-all backdrop-blur-sm shadow-lg">
-                    🌐 BN / EN
-                </button>
+                <button onclick="toggleGlobalLang()" class="bg-white/10 hover:bg-white/20 border border-white/30 px-6 py-2 rounded-full font-bold transition-all backdrop-blur-sm shadow-lg">🌐 BN / EN</button>
             </div>
             <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">Ultimate<span class="text-blue-400">Tools</span></h1>
-            <p id="siteTagline" class="text-blue-100 mb-10 max-w-lg mx-auto text-lg opacity-90">Smart Digital Utility Hub — The best solution to make your workflow faster and easier.</p>
+            <p id="siteTagline" class="text-blue-100 mb-10 max-w-lg mx-auto text-lg opacity-90">Secure & Fast Digital Utility Hub — Professional solutions for your everyday tasks.</p>
             <div class="max-w-2xl mx-auto search-container p-2 rounded-3xl transition-all focus-within:ring-4 ring-blue-500/30">
                 <div class="relative flex items-center">
-                    <input type="text" id="toolSearch" onkeyup="searchTools()" placeholder="Search Tools (e.g. Name, QR, Image, PDF...)" class="w-full bg-transparent px-6 py-4 rounded-2xl text-white placeholder-blue-200 outline-none text-lg">
+                    <input type="text" id="toolSearch" onkeyup="searchTools()" placeholder="Search Tools (e.g. Word, Age, QR...)" class="w-full bg-transparent px-6 py-4 rounded-2xl text-white placeholder-blue-200 outline-none text-lg">
                     <div class="pr-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                     </div>
                 </div>
             </div>
@@ -84,148 +70,109 @@
     </header>
 
     <main class="max-w-6xl mx-auto -mt-16 px-4 relative z-20">
-        <div class="mb-10 bg-white/70 backdrop-blur p-4 rounded-[2rem] shadow-xl border border-white/50 text-center">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7690803775663030" data-ad-slot="6417293900" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-
         <div id="toolGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="word.html" class="tool-item group" data-tags="word counter line character text analysis">
+                <div class="tool-card p-8 rounded-[2.5rem] border-b-4 border-indigo-600 gap-6">
+                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #6366f1, #4f46e5);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Pro Word Counter" data-bn="প্রো ওয়ার্ড কাউন্টার">Pro Word Counter</h3>
+                        <p class="text-gray-500 tool-desc" data-en="Count words, lines, and characters in your text with real-time analysis." data-bn="আপনার টেক্সটের শব্দ, লাইন এবং অক্ষর সংখ্যা রিয়েল-টাইমে গণনা করুন।">Count words, lines, and characters in your text with real-time analysis.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://tools76.github.io/Typing-speed-Test/" class="tool-item group" data-tags="typing test speed check accuracy wpm">
+                <div class="tool-card p-8 rounded-[2.5rem] border-b-4 border-purple-600 gap-6">
+                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #a855f7, #9333ea);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" /></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Typing Speed Tester" data-bn="টাইপিং স্পিড টেস্টার">Typing Speed Tester</h3>
+                        <p class="text-gray-500 tool-desc" data-en="Measure your typing speed (WPM) and accuracy with our interactive trainer." data-bn="আমাদের ইন্টারেক্টিভ ট্রেইনারের মাধ্যমে টাইপিং স্পিড এবং নির্ভুলতা পরীক্ষা করুন।">Measure your typing speed (WPM) and accuracy with our interactive trainer.</p>
+                    </div>
+                </div>
+            </a>
+
             <a href="https://tools76.github.io/age-calculator/" class="tool-item group" data-tags="age calculator birth date birthday">
                 <div class="tool-card p-8 rounded-[2.5rem] border-b-4 border-blue-600 gap-6">
                     <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Pro Age Calculator" data-bn="প্রো এজ ক্যালকুলেটর">Pro Age Calculator</h3>
-                        <p class="text-gray-500 tool-desc" data-en="Calculate exact age, next birthday countdown, and amazing life statistics instantly." data-bn="আপনার সঠিক বয়স, পরবর্তী জন্মদিনের সময় এবং জীবনের চমৎকার সব তথ্য জানুন।">Calculate exact age, next birthday countdown, and amazing life statistics instantly.</p>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Smart Age Calculator" data-bn="স্মার্ট এজ ক্যালকুলেটর">Smart Age Calculator</h3>
+                        <p class="text-gray-500 tool-desc" data-en="Calculate exact age and upcoming birthday statistics instantly." data-bn="আপনার সঠিক বয়স এবং পরবর্তী জন্মদিনের তথ্য জানুন নিমেষেই।">Calculate exact age and upcoming birthday statistics instantly.</p>
                     </div>
                 </div>
             </a>
 
-            <a href="https://tools76.github.io/Strong-password-generator/" class="tool-item group" data-tags="strong password generator secure pass creator random string">
+            <a href="https://tools76.github.io/Strong-password-generator/" class="tool-item group" data-tags="strong password generator secure pass creator">
                 <div class="tool-card p-8 rounded-[2.5rem] border-b-4 border-emerald-500 gap-6">
                     <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #10b981, #059669);">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Strong Password Generator" data-bn="স্ট্রং পাসওয়ার্ড জেনারেটর">Strong Password Generator</h3>
-                        <p class="text-gray-500 tool-desc" data-en="Create unhackable, high-security passwords with custom symbols and numbers instantly." data-bn="চিহ্ন এবং সংখ্যার জটিল সমন্বয়ে হ্যাক-প্রুফ হাই-সিকিউরিটি পাসওয়ার্ড তৈরি করুন।">Create unhackable, high-security passwords with custom symbols and numbers instantly.</p>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Secure Password Generator" data-bn="সিকিউর পাসওয়ার্ড জেনারেটর">Secure Password Generator</h3>
+                        <p class="text-gray-500 tool-desc" data-en="Generate high-security passwords to protect your digital accounts." data-bn="আপনার ডিজিটাল অ্যাকাউন্ট সুরক্ষার জন্য হাই-সিকিউরিটি পাসওয়ার্ড তৈরি করুন।">Generate high-security passwords to protect your digital accounts.</p>
                     </div>
                 </div>
             </a>
 
-            <a href="https://tools76.github.io/Fancy-Name-Generator/" class="tool-item group" data-tags="stylish name generator fancy text creator gaming font">
+            <a href="https://tools76.github.io/Fancy-Name-Generator/" class="tool-item group" data-tags="stylish name generator fancy text creator">
                 <div class="tool-card p-8 rounded-[2.5rem] border-b-4 border-pink-500 gap-6">
-                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">
+                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #ec4899, #db2777);">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Stylish Name Generator" data-bn="স্টাইলিশ নাম জেনারেটর">Stylish Name Generator</h3>
-                        <p class="text-gray-500 tool-desc" data-en="Generate 100+ fancy and stylish names for social media and gaming profiles." data-bn="গেমিং এবং সোশ্যাল মিডিয়ার জন্য ১০০+ স্টাইলিশ নাম তৈরি করুন।">Generate 100+ fancy and stylish names for social media and gaming profiles.</p>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Stylish Name Maker" data-bn="স্টাইলিশ নাম মেকার">Stylish Name Maker</h3>
+                        <p class="text-gray-500 tool-desc" data-en="Create fancy and cool names for gaming and social profiles." data-bn="গেমিং এবং সোশ্যাল প্রোফাইলের জন্য স্টাইলিশ নাম তৈরি করুন।">Create fancy and cool names for gaming and social profiles.</p>
                     </div>
                 </div>
             </a>
 
-            <a href="https://tools76.github.io/qrcodegenarator/" class="tool-item group" data-tags="qr code generator studio create qr scan">
+            <a href="https://tools76.github.io/qrcodegenarator/" class="tool-item group" data-tags="qr code generator studio create qr">
                 <div class="tool-card p-8 rounded-[2.5rem] border-b-4 border-orange-500 gap-6">
-                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #f97316, #fbbf24);">
+                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #f97316, #ea580c);">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1-1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" /></svg>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Elite QR Code Studio" data-bn="এলিট কিউআর কোড স্টুডিও">Elite QR Code Studio</h3>
-                        <p class="text-gray-500 tool-desc" data-en="Premium tool to create professional QR codes with logos and custom frames." data-bn="লোগো এবং কাস্টম ফ্রেম সহ প্রফেশনাল কিউআর কোড তৈরির সেরা টুল।">Premium tool to create professional QR codes with logos and custom frames.</p>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://tools76.github.io/Image-convertor/" class="tool-item group" data-tags="image pdf converter jpg to png webp">
-                <div class="tool-card p-8 rounded-[2.5rem] border-b-4 border-indigo-500 gap-6">
-                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #6366f1, #a855f7);">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" /></svg>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Elite Image/PDF Converter" data-bn="এলিট ইমেজ/পিডিএফ কনভার্টার">Elite Image/PDF Converter</h3>
-                        <p class="text-gray-500 tool-desc" data-en="All-in-one converter for Images to PDF and multiple graphic formats." data-bn="ইমেজ থেকে পিডিএফ এবং বিভিন্ন গ্রাফিক ফরম্যাটে রূপান্তরের অল-ইন-ওয়ান টুল।">All-in-one converter for Images to PDF and multiple graphic formats.</p>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://tools76.github.io/Thumbnail-downloader/" class="tool-item group" data-tags="thumbnail downloader channel youtube hd">
-                <div class="tool-card p-8 rounded-[2.5rem] border-b-4 border-red-500 gap-6">
-                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #ef4444, #f87171);">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Thumbnail Analysis" data-bn="থাম্বনেইল অ্যানালাইসিস">Thumbnail Analysis</h3>
-                        <p class="text-gray-500 tool-desc" data-en="Download HD YouTube thumbnails and get deep channel analysis instantly." data-bn="এইচডি থাম্বনেইল ডাউনলোড এবং চ্যানেলের বিস্তারিত তথ্য জানুন নিমেষেই।">Download HD YouTube thumbnails and get deep channel analysis instantly.</p>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://tools76.github.io/image-resizer/" class="tool-item group" data-tags="image resizer photo compress optimize">
-                <div class="tool-card p-8 rounded-[2.5rem] border-b-4 border-teal-500 gap-6">
-                    <div class="icon-box p-5 rounded-2xl text-white group-hover:rotate-12 transition-transform" style="background: linear-gradient(135deg, #14b8a6, #0d9488);">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" /></svg>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Elite Image Resizer" data-bn="এলিট ইমেজ রিসাইজার">Elite Image Resizer</h3>
-                        <p class="text-gray-500 tool-desc" data-en="Professional tool to resize and optimize photos while maintaining pixel quality." data-bn="পিক্সেল কোয়ালিটি ঠিক রেখে প্রফেশনাল ভাবে ফটো রিসাইজ এবং অপ্টিমাইজ করুন।">Professional tool to resize and optimize photos while maintaining pixel quality.</p>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1 tool-title" data-en="Professional QR Creator" data-bn="প্রফেশনাল কিউআর ক্রিয়েটর">Professional QR Creator</h3>
+                        <p class="text-gray-500 tool-desc" data-en="Generate custom QR codes with high-quality resolution for free." data-bn="বিনামূল্যে হাই-কোয়ালিটি কাস্টম কিউআর কোড তৈরি করুন।">Generate custom QR codes with high-quality resolution for free.</p>
                     </div>
                 </div>
             </a>
         </div>
 
         <div class="mt-20 bg-white p-10 rounded-[2.5rem] shadow-xl border border-gray-100">
-            <h2 class="text-3xl font-bold text-blue-600 mb-6 tool-title" data-en="About Ultimate Tools - Your Ultimate Digital Utility Companion" data-bn="আমাদের ডিজিটাল টুলস সম্পর্কে বিস্তারিত - আপনার জীবনকে সহজ করার সমাধান">About Ultimate Tools - Your Ultimate Digital Utility Companion</h2>
+            <h2 class="text-3xl font-bold text-blue-600 mb-6 tool-title" data-en="About Ultimate Tools - Professional Productivity Hub" data-bn="আলটিমেট টুলস সম্পর্কে - প্রফেশনাল প্রোডাক্টিভিটি হাব">About Ultimate Tools - Professional Productivity Hub</h2>
             
             <div id="longDesc" class="text-gray-700 space-y-4 text-lg leading-relaxed">
-                <p>Welcome to <strong>Ultimate Tools</strong>, a premier destination for high-performance web utilities designed to simplify your daily digital tasks. Our mission is to provide professional-grade tools that are 100% free, secure, and accessible to everyone without any registration or login hurdles. Whether you are a software developer, a content creator, or a casual internet user, our platform is engineered to boost your productivity. We focus on speed, accuracy, and user privacy above all else.</p>
-                <p>In today's fast-paced digital world, efficiency is key. That’s why we have curated 7 essential tools. Our <strong>Pro Age Calculator</strong> provides more than just years; it offers a breakdown of your life in months, weeks, days, and even heartbeats. For security enthusiasts, the <strong>Strong Password Generator</strong> creates military-grade encrypted strings to protect your digital identity. Branding is made easy with our <strong>Stylish Name Generator</strong> and <strong>Elite QR Code Studio</strong>, allowing you to create unique identifiers for your business or gaming profiles with custom logos.</p>
-                <p>Content creators can rely on our <strong>YouTube Thumbnail Analysis</strong> tool to fetch high-definition graphics and perform channel audits instantly. Furthermore, our <strong>Elite Image/PDF Converter</strong> and <strong>Image Resizer</strong> are indispensable for anyone dealing with web optimization, ensuring your photos are perfectly sized without losing quality. We use advanced algorithms and the latest web technologies like Tailwind CSS and JavaScript to ensure a seamless experience on both desktop and mobile devices. Contact us via our support pages for help.</p>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
-                <div class="text-left">
-                    <p class="text-sm text-gray-500 uppercase tracking-widest">Digital Support</p>
-                    <p class="text-xl font-bold text-gray-800">Secure Online Platform</p>
-                </div>
-                <div class="text-left md:text-right">
-                    <p class="text-sm text-gray-500 uppercase tracking-widest">Global Reach</p>
-                    <p class="text-xl font-bold text-gray-800">Available Worldwide</p>
-                </div>
+                <p>Welcome to <strong>Ultimate Tools</strong>, your comprehensive hub for high-speed digital utilities. We provide a collection of 100% secure, free-to-use professional tools that simplify complex tasks for developers, writers, and students. Our platform operates without requiring any user registration, ensuring maximum privacy and instant access.</p>
+                <p>Our <strong>Pro Word Counter</strong> and <strong>Typing Speed Tester</strong> are designed specifically for writers and professionals who want to track their efficiency and output quality. For those concerned about security, our <strong>Strong Password Generator</strong> uses advanced encryption logic to create unhackable keys. We also provide aesthetic tools like the <strong>Stylish Name Generator</strong> and functional utilities like the <strong>Smart Age Calculator</strong> and <strong>QR Code Studio</strong>.</p>
+                <p>At Ultimate Tools, we prioritize lightweight architecture and responsive design. Built with the latest technologies like Tailwind CSS, our site ensures a seamless experience across all devices. We are committed to maintaining a clean environment, free from intrusive pop-ups, while providing the highest utility value to our global user base.</p>
             </div>
         </div>
 
         <nav class="flex flex-wrap justify-center gap-8 mt-12 border-t border-gray-200 pt-10">
-            <a href="privacy-policy.html" class="text-gray-600 hover:text-blue-600 font-bold text-lg transition-colors">Privacy Policy</a>
-            <a href="termsandcondition.html" class="text-gray-600 hover:text-blue-600 font-bold text-lg transition-colors">Terms and Condition</a>
-            <a href="contact.html" class="text-gray-600 hover:text-blue-600 font-bold text-lg transition-colors">Contact Us</a>
-            <a href="developer.html" class="text-gray-600 hover:text-blue-600 font-bold text-lg transition-colors">Developer</a>
+            <a href="privacy-policy.html" class="text-gray-600 hover:text-blue-600 font-bold transition-colors">Privacy Policy</a>
+            <a href="termsandcondition.html" class="text-gray-600 hover:text-blue-600 font-bold transition-colors">Terms and Condition</a>
+            <a href="contact.html" class="text-gray-600 hover:text-blue-600 font-bold transition-colors">Contact Us</a>
+            <a href="developer.html" class="text-gray-600 hover:text-blue-600 font-bold transition-colors">Developer Profile</a>
         </nav>
 
         <footer class="mt-12 text-center">
-            <p class="text-gray-400 text-sm tracking-widest uppercase mb-2">© 2026 ULTIMATE TOOLS PREMIUM | SECURE WEB UTILITIES</p>
+            <p class="text-gray-400 text-sm tracking-widest uppercase mb-2">© 2026 ULTIMATE TOOLS PREMIUM | BUILT BY CHHATAK TOOLS</p>
             <div class="h-1 w-20 bg-blue-500 mx-auto rounded-full"></div>
         </footer>
     </main>
 
     <script>
         let currentLang = 'en';
-        const bnContent = `
-            <p><strong>আলটিমেট টুলস (Ultimate Tools)</strong>-এ আপনাকে স্বাগতম। এটি একটি প্রিমিয়াম ডিজিটাল ইউটিলিটি হাব যা আপনার দৈনন্দিন কাজগুলোকে সহজ করার জন্য তৈরি করা হয়েছে। আমাদের লক্ষ্য হলো প্রফেশনাল মানের টুলস সম্পূর্ণ বিনামূল্যে এবং নিরাপদে সবার কাছে পৌঁছে দেওয়া। এখানে কোনো লগইন বা রেজিস্ট্রেশনের ঝামেলা নেই। আপনি একজন ডেভেলপার, কন্টেন্ট ক্রিয়েটর বা সাধারণ ব্যবহারকারী যাই হোন না কেন, আমাদের টুলসগুলো আপনার উৎপাদনশীলতা বাড়াতে সাহায্য করবে। এই প্ল্যাটফর্মটি গতি, নির্ভুলতা এবং ব্যবহারকারীর গোপনীয়তার ওপর সর্বোচ্চ গুরুত্ব দেয়।</p>
-            <p>বর্তমান ডিজিটাল যুগে সময়ের মূল্য অনেক। আর তাই আমরা বাছাইকৃত ৭টি গুরুত্বপূর্ণ টুলস যুক্ত করেছি। আমাদের <strong>প্রো এজ ক্যালকুলেটর</strong> শুধু বছর নয়, বরং মাস, সপ্তাহ, দিন এমনকি হার্টবিট পর্যন্ত হিসাব করে দেয়। সাইবার নিরাপত্তার জন্য রয়েছে <strong>স্ট্রং পাসওয়ার্ড জেনারেটর</strong>, যা আপনার অ্যাকাউন্টের জন্য হ্যাক-প্রুফ পাসওয়ার্ড তৈরি করে। ব্র্যান্ডিংয়ের জন্য আমাদের <strong>স্টাইলিশ নাম জেনারেটর</strong> এবং <strong>এলিট কিউআর কোড স্টুডিও</strong> অসাধারণ, যা দিয়ে আপনি লোগোসহ কাস্টম কিউআর কোড তৈরি করতে পারবেন।</p>
-            <p>কন্টেন্ট ক্রিয়েটরদের জন্য আমাদের <strong>থাম্বনেইল অ্যানালাইসিস</strong> টুলটি খুবই কার্যকর, যা ইউটিউব ভিডিওর এইচডি থাম্বনেইল এবং চ্যানেলের তথ্য মুহূর্তেই প্রদান করে। এছাড়া <strong>ইমেজ/পিডিএফ কনভার্টার</strong> এবং <strong>ইমেজ রিসাইজার</strong> টুলগুলো ছবির কোয়ালিটি ঠিক রেখে ফাইল সাইজ অপ্টিমাইজ করতে সাহায্য করে। আমরা Tailwind CSS এবং আধুনিক জাভাস্ক্রিপ্ট ব্যবহার করেছি যাতে সাইটটি মোবাইল ও কম্পিউটার সব ডিভাইসে দ্রুত কাজ করে। যেকোনো প্রয়োজনে আমাদের সাপোর্ট পেজের মাধ্যমে যোগাযোগ করুন।</p>
-        `;
-        const enContent = `
-            <p>Welcome to <strong>Ultimate Tools</strong>, a premier destination for high-performance web utilities designed to simplify your daily digital tasks. Our mission is to provide professional-grade tools that are 100% free, secure, and accessible to everyone without any registration or login hurdles. Whether you are a software developer, a content creator, or a casual internet user, our platform is engineered to boost your productivity. We focus on speed, accuracy, and user privacy above all else.</p>
-            <p>In today's fast-paced digital world, efficiency is key. That’s why we have curated 7 essential tools. Our <strong>Pro Age Calculator</strong> provides more than just years; it offers a breakdown of your life in months, weeks, days, and even heartbeats. For security enthusiasts, the <strong>Strong Password Generator</strong> creates military-grade encrypted strings to protect your digital identity. Branding is made easy with our <strong>Stylish Name Generator</strong> and <strong>Elite QR Code Studio</strong>, allowing you to create unique identifiers for your business or gaming profiles with custom logos.</p>
-            <p>Content creators can rely on our <strong>YouTube Thumbnail Analysis</strong> tool to fetch high-definition graphics and perform channel audits instantly. Furthermore, our <strong>Elite Image/PDF Converter</strong> and <strong>Image Resizer</strong> are indispensable for anyone dealing with web optimization, ensuring your photos are perfectly sized without losing quality. We use advanced algorithms and the latest web technologies like Tailwind CSS and JavaScript to ensure a seamless experience on both desktop and mobile devices. Contact us via our support pages for help.</p>
-        `;
-
         function toggleGlobalLang() {
             currentLang = currentLang === 'en' ? 'bn' : 'en';
-            document.getElementById('siteTagline').innerText = currentLang === 'en' ? "Smart Digital Utility Hub — The best solution to make your workflow faster and easier." : "স্মার্ট ডিজিটাল ইউটিলিটি হাব — আপনার কাজকে দ্রুত এবং সহজ করার সেরা সমাধান।";
-            document.getElementById('toolSearch').placeholder = currentLang === 'en' ? "Search Tools (e.g. Name, QR, Image, PDF...)" : "টুল সার্চ করুন (যেমন: নাম, কিউআর, ইমেজ, পাসওয়ার্ড...)";
-            document.getElementById('longDesc').innerHTML = currentLang === 'en' ? enContent : bnContent;
+            document.getElementById('siteTagline').innerText = currentLang === 'en' ? "Secure & Fast Digital Utility Hub — Professional solutions for your everyday tasks." : "নিরাপদ ও দ্রুত ডিজিটাল ইউটিলিটি হাব — আপনার দৈনন্দিন কাজের জন্য প্রফেশনাল সমাধান।";
+            document.getElementById('toolSearch').placeholder = currentLang === 'en' ? "Search Tools (e.g. Word, Age, QR...)" : "টুল সার্চ করুন (যেমন: ওয়ার্ড, এজ, কিউআর...)";
             document.querySelectorAll('.tool-title').forEach(el => el.innerText = el.getAttribute(`data-${currentLang}`));
             document.querySelectorAll('.tool-desc').forEach(el => el.innerText = el.getAttribute(`data-${currentLang}`));
         }
@@ -235,13 +182,7 @@
             let items = document.getElementsByClassName('tool-item');
             for (let i = 0; i < items.length; i++) {
                 let tags = items[i].getAttribute('data-tags');
-                if (tags.toLowerCase().includes(input)) {
-                    items[i].style.display = "block";
-                    items[i].classList.add('animate-fade');
-                } else {
-                    items[i].style.display = "none";
-                    items[i].classList.remove('animate-fade');
-                }
+                items[i].style.display = tags.toLowerCase().includes(input) ? "block" : "none";
             }
         }
     </script>

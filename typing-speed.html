@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing speed Tester</title>
+    
+    <meta name="description" content="Test your professional typing speed (WPM) and accuracy with Elite Typing Studio. High-end typing engine with detailed performance reports.">
+    <meta name="keywords" content="typing test, speed typing, wpm calculator, professional typing, accuracy test, 2026 typing tools">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690803775663030" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Hind+Siliguri:wght@400;700&display=swap');
+        
+        :root { --bg-light: #f8fafc; --accent: #2563eb; }
+        body { font-family: 'Outfit', 'Hind Siliguri', sans-serif; background: var(--bg-light); color: #1e293b; }
+        .glow-text { color: #1d4ed8; text-shadow: 0 0 10px rgba(37, 99, 235, 0.1); font-weight: 800; }
+        .hero-title { background: linear-gradient(to right, #1e40af, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass-panel { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(20px); border: 1px solid rgba(37, 99, 235, 0.1); border-radius: 2.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.05); }
+        .display-text { background: #ffffff; border: 2px solid #e2e8f0; border-radius: 1.5rem; padding: 25px; font-size: 1.4rem; line-height: 1.8; color: #64748b; }
+        .typing-input { border: 2px solid #2563eb; border-radius: 1.2rem; outline: none; transition: 0.3s; }
+        .typing-input:focus { box-shadow: 0 0 25px rgba(37, 99, 235, 0.15); }
+        .stat-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1.2rem; padding: 15px; text-align: center; }
+        .highlight-correct { color: #10b981; font-weight: 700; }
+        .highlight-wrong { color: #ef4444; text-decoration: underline; background: rgba(239, 68, 68, 0.05); }
+        .btn-gradient { background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); transition: all 0.4s; }
+        #resultCapture { background: #ffffff; padding: 50px; border-radius: 30px; width: 600px; position: fixed; left: -9999px; border: 1px solid #e2e8f0; }
+        .nav-link { font-weight: 700; font-size: 13px; color: #64748b; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .nav-link:hover { color: #2563eb; }
+    </style>
+</head>
+<body class="p-4">
+
+    <nav class="max-w-6xl mx-auto w-full flex justify-between items-center py-6 px-4">
+        <div class="text-2xl font-black italic hero-title">ELITE STUDIO</div>
+        <div class="hidden md:flex gap-8">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">WPM Guide</a>
+            <a href="#" class="nav-link">Practice</a>
+            <a href="#" class="nav-link">Contact</a>
+        </div>
+        <button onclick="toggleLang()" id="langBtn" class="bg-blue-50 text-blue-600 px-6 py-2 rounded-full font-black text-xs border border-blue-100 uppercase">BN</button>
+    </nav>
+
+    <div class="max-w-6xl w-full mx-auto">
+        <header class="text-center mt-10 mb-16">
+            <h1 id="mainTitle" class="text-5xl md:text-8xl font-black hero-title mb-4 tracking-tighter uppercase italic leading-none">Elite <span class="glow-text">Typing</span> Studio</h1>
+            <p class="text-slate-500 font-bold text-lg uppercase tracking-widest italic opacity-80">2026 Next-Gen Speed Verification Engine</p>
+        </header>
+
+        <main class="glass-panel p-8 md:p-14 mb-12 relative overflow-hidden">
+            <div id="setupBox" class="mb-10 text-center">
+                <label id="selectLabel" class="block text-slate-500 text-xs font-black uppercase tracking-widest mb-4">Duration Selection:</label>
+                <div class="flex justify-center gap-4">
+                    <button onclick="setTime(30)" class="time-btn bg-white px-8 py-3 rounded-2xl border-2 border-slate-100 font-bold transition">30s</button>
+                    <button onclick="setTime(60)" class="time-btn bg-blue-600 text-white px-8 py-3 rounded-2xl border-2 border-blue-600 font-bold transition">60s</button>
+                    <button onclick="setTime(120)" class="time-btn bg-white px-8 py-3 rounded-2xl border-2 border-slate-100 font-bold transition">120s</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                <div class="stat-card"><p id="statTime" class="text-[10px] text-blue-600 font-black uppercase">Time Left</p><p id="timer" class="text-3xl font-black">60s</p></div>
+                <div class="stat-card"><p id="statWpm" class="text-[10px] text-blue-600 font-black uppercase">Speed WPM</p><p id="wpm" class="text-3xl font-black">0</p></div>
+                <div class="stat-card"><p id="statAcc" class="text-[10px] text-blue-600 font-black uppercase">Accuracy</p><p id="accuracy" class="text-3xl font-black">100%</p></div>
+                <div class="stat-card"><p id="statError" class="text-[10px] text-blue-600 font-black uppercase">Errors</p><p id="errors" class="text-3xl font-black">0</p></div>
+            </div>
+
+            <div id="textDisplay" class="display-text mb-8 italic">Please select test duration and press start...</div>
+            <textarea id="userInput" class="typing-input hidden w-full p-6 text-xl" rows="4" placeholder="Start typing here..." oninput="checkTyping()"></textarea>
+            
+            <div class="mt-10 flex flex-wrap justify-center gap-6">
+                <button id="startBtn" onclick="startTest()" class="btn-gradient px-16 py-5 text-white font-black rounded-3xl uppercase tracking-widest text-xl shadow-xl">Launch Test ✨</button>
+                <button id="stopBtn" onclick="endTest(true)" class="hidden bg-red-50 border-2 border-red-200 text-red-600 px-16 py-5 font-black rounded-3xl uppercase tracking-widest">Abort</button>
+            </div>
+
+            <div id="resultBox" class="hidden mt-12 p-10 bg-blue-50/50 rounded-[2rem] border-2 border-blue-100 text-center">
+                <h2 id="resTitle" class="text-4xl font-black mb-4 uppercase glow-text">Performance Verified</h2>
+                <p id="resDesc" class="text-slate-600 font-bold mb-10 text-xl"></p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button onclick="downloadResult()" class="bg-blue-600 text-white px-12 py-4 rounded-2xl font-black uppercase text-xs tracking-widest">Download Report</button>
+                    <button onclick="location.reload()" class="bg-white border-2 border-slate-200 px-12 py-4 rounded-2xl font-black text-slate-500 uppercase text-xs tracking-widest">Restart</button>
+                </div>
+            </div>
+        </main>
+
+        <article class="mt-20 glass-panel p-10 md:p-16">
+            <h2 id="seoTitle" class="text-4xl font-black text-blue-900 mb-10 uppercase italic glow-text">How to Master Typing Speed (WPM Guide)</h2>
+            
+            <div id="seoContent" class="grid md:grid-cols-2 gap-12 text-slate-600 leading-relaxed">
+                <div>
+                    <h3 class="text-xl font-bold text-blue-600 mb-4 uppercase">1. Understanding WPM (Words Per Minute)</h3>
+                    <p class="mb-4">WPM is the standard metric used to measure typing speed. Our Elite Studio uses the international standard where 1 Word = 5 Characters (including spaces). This ensures that whether you type short or long words, your speed assessment remains fair and accurate.</p>
+                    
+                    <h3 class="text-xl font-bold text-blue-600 mb-4 uppercase">2. Proper Finger Placement</h3>
+                    <p class="mb-4">To reach 80+ WPM, you must use the "Home Row" method. Your fingers should rest on A, S, D, F and J, K, L, ; keys. This muscle memory technique allows you to type without looking at the keyboard.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-blue-600 mb-4 uppercase">3. Importance of Accuracy</h3>
+                    <p class="mb-4">Speed is useless without accuracy. In a professional environment, errors lead to wasted time. We recommend focusing on 98% accuracy first, then slowly increasing your speed.</p>
+                    
+                    <div class="mt-6 overflow-hidden rounded-xl border border-blue-100">
+                        <table class="w-full text-sm">
+                            <thead class="bg-blue-600 text-white font-bold uppercase">
+                                <tr><th class="p-3">WPM Score</th><th class="p-3">Level</th></tr>
+                            </thead>
+                            <tbody class="bg-white">
+                                <tr class="border-b"><td class="p-3 text-center">0 - 30</td><td class="p-3 text-center">Beginner</td></tr>
+                                <tr class="border-b"><td class="p-3 text-center">31 - 50</td><td class="p-3 text-center">Average</td></tr>
+                                <tr class="border-b"><td class="p-3 text-center">51 - 80</td><td class="p-3 text-center">Professional</td></tr>
+                                <tr><td class="p-3 text-center">80+</td><td class="p-3 text-center">Elite Master</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <footer class="mt-20 text-center pb-20 border-t border-slate-200 pt-10">
+            <div class="flex flex-wrap justify-center gap-10 text-[11px] font-black uppercase tracking-[3px] text-slate-400 mb-8">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">About Us</a>
+            </div>
+            <p class="text-blue-900/40 text-[10px] font-bold uppercase tracking-[5px]">
+                © 2026 Elite Digital Studio • Powered by Nazrul
+            </p>
+        </footer>
+    </div>
+
+    <div id="resultCapture">
+        <h1 style="color:#1d4ed8; font-size: 35px; font-weight: 900; margin-bottom: 5px; font-family: sans-serif;">TYPING MASTER PRO</h1>
+        <p style="color:#64748b; font-size: 16px; margin-bottom: 40px; font-family: sans-serif; font-weight: bold; letter-spacing: 2px;">OFFICIAL PERFORMANCE REPORT</p>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div style="background:#f8fafc; padding:25px; border-radius:20px; border:2px solid #e2e8f0; text-align:center;">
+                <p style="color:#2563eb; font-size:12px; font-weight:900; text-transform:uppercase; margin-bottom:10px;">Speed</p>
+                <p id="resWpm" style="font-size:40px; font-weight:900; color:#1e293b;">0 WPM</p>
+            </div>
+            <div style="background:#f8fafc; padding:25px; border-radius:20px; border:2px solid #e2e8f0; text-align:center;">
+                <p style="color:#2563eb; font-size:12px; font-weight:900; text-transform:uppercase; margin-bottom:10px;">Accuracy</p>
+                <p id="resAcc" style="font-size:40px; font-weight:900; color:#1e293b;">100%</p>
+            </div>
+            <div style="background:#f8fafc; padding:25px; border-radius:20px; border:2px solid #e2e8f0; text-align:center;">
+                <p style="color:#2563eb; font-size:12px; font-weight:900; text-transform:uppercase; margin-bottom:10px;">Errors</p>
+                <p id="resErr" style="font-size:40px; font-weight:900; color:#ef4444;">0</p>
+            </div>
+            <div style="background:#f8fafc; padding:25px; border-radius:20px; border:2px solid #e2e8f0; text-align:center;">
+                <p style="color:#2563eb; font-size:12px; font-weight:900; text-transform:uppercase; margin-bottom:10px;">Rank</p>
+                <p id="resStatus" style="font-size:24px; font-weight:900; color:#10b981;">EXCELLENT</p>
+            </div>
+        </div>
+        <p style="margin-top:30px; text-align:center; color:#94a3b8; font-size:12px;">Verified by Elite Studio Verification Engine 2026</p>
+    </div>
+
+    <script>
+        const texts = [
+            "Precision and speed are the hallmarks of a professional typist. Mastery of the keyboard requires consistent practice and focus.",
+            "Technology empowers people to achieve more. In 2026, typing remains a critical bridge between human thought and digital action.",
+            "The quick brown fox jumps over the lazy dog. This sentence contains every letter in the alphabet for perfect practice.",
+            "Success follows those who refuse to give up. Every typing session brings you one step closer to professional excellence.",
+            "Elite Typing Studio provides the most accurate real-time word per minute calculation available on the modern web."
+        ];
+
+        const bnTexts = [
+            "সাফল্য তাদেরই অনুসরণ করে যারা হাল ছেড়ে দেয় না। প্রতিটি টাইপিং সেশন আপনাকে পেশাদারিত্বের এক ধাপ কাছাকাছি নিয়ে যায়।",
+            "প্রযুক্তি মানুষকে আরও বেশি অর্জনে সক্ষম করে। ২০২৬ সালেও টাইপিং মানুষের চিন্তা ও ডিজিটাল কর্মের মধ্যে একটি গুরুত্বপূর্ণ সেতু।",
+            "এলিট টাইপিং স্টুডিও আধুনিক ওয়েব দুনিয়ায় রিয়েল-টাইম গতি গণনার সবচেয়ে নির্ভুল সুবিধা প্রদান করে থাকে।",
+            "একটি পেশাদার টাইপিস্টের বৈশিষ্ট্য হলো নির্ভুলতা এবং গতি। কিবোর্ডে দক্ষতা অর্জনের জন্য প্রয়োজন নিয়মিত অনুশীলন ও মনোযোগ।"
+        ];
+
+        let timeLeft = 60; let selectedTime = 60; let timerTask = null; let currentText = ""; let isEnglish = true;
+
+        function setTime(t) {
+            selectedTime = t; timeLeft = t;
+            document.getElementById('timer').innerText = t + "s";
+            document.querySelectorAll('.time-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
+                if(btn.innerText.includes(t)) btn.classList.add('bg-blue-600', 'text-white', 'border-blue-600');
+            });
+        }
+
+        function startTest() {
+            document.getElementById('setupBox').classList.add('hidden');
+            document.getElementById('startBtn').classList.add('hidden');
+            document.getElementById('stopBtn').classList.remove('hidden');
+            document.getElementById('userInput').classList.remove('hidden');
+            document.getElementById('userInput').value = "";
+            document.getElementById('userInput').focus();
+            let source = isEnglish ? texts : bnTexts;
+            currentText = source[Math.floor(Math.random() * source.length)] + " " + source[Math.floor(Math.random() * source.length)];
+            renderText();
+            timeLeft = selectedTime;
+            timerTask = setInterval(() => {
+                timeLeft--; document.getElementById('timer').innerText = timeLeft + "s";
+                if(timeLeft <= 0) endTest(false);
+            }, 1000);
+        }
+
+        function renderText() {
+            document.getElementById('textDisplay').innerHTML = currentText.split('').map(char => `<span>${char}</span>`).join('');
+        }
+
+        function checkTyping() {
+            const input = document.getElementById('userInput').value;
+            const spans = document.getElementById('textDisplay').querySelectorAll('span');
+            let err = 0;
+            spans.forEach((span, i) => {
+                if (i < input.length) {
+                    if (input[i] === span.innerText) span.className = "highlight-correct";
+                    else { span.className = "highlight-wrong"; err++; }
+                } else span.className = "";
+            });
+            const timeSpent = (selectedTime - timeLeft) / 60;
+            const wpm = timeSpent > 0 ? Math.round((input.length / 5) / timeSpent) : 0;
+            const acc = input.length > 0 ? Math.round(((input.length - err) / input.length) * 100) : 100;
+            document.getElementById('wpm').innerText = wpm;
+            document.getElementById('accuracy').innerText = acc + "%";
+            document.getElementById('errors').innerText = err;
+            if (input.length >= currentText.length) endTest(false, true);
+        }
+
+        function endTest(stopped, success = false) {
+            clearInterval(timerTask);
+            document.getElementById('userInput').classList.add('hidden');
+            document.getElementById('stopBtn').classList.add('hidden');
+            document.getElementById('resultBox').classList.remove('hidden');
+            document.getElementById('resStatus').innerText = success ? "MASTER" : "FINISHED";
+            document.getElementById('resWpm').innerText = document.getElementById('wpm').innerText + " WPM";
+            document.getElementById('resAcc').innerText = document.getElementById('accuracy').innerText;
+            document.getElementById('resErr').innerText = document.getElementById('errors').innerText;
+            document.getElementById('resDesc').innerText = `Speed: ${document.getElementById('wpm').innerText} WPM | Accuracy: ${document.getElementById('accuracy').innerText}`;
+        }
+
+        function downloadResult() {
+            html2canvas(document.querySelector("#resultCapture")).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'typing-report.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            });
+        }
+
+        function toggleLang() {
+            isEnglish = !isEnglish;
+            document.getElementById('langBtn').innerText = isEnglish ? "BN" : "EN";
+            location.reload(); // Simple reload for lang toggle is better for Adsense stability
+        }
+    </script>
+</body>
+</html>

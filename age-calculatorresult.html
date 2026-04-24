@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Result - Precise Life Statistics | Ultimate Tools</title>
+    
+    <meta name="description" content="View your detailed life statistics, heartbeats, and zodiac analysis. Professional age reporting tool.">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7690803775663030" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+        
+        :root {
+            --bg-light: #f8fafc;
+            --accent: #2563eb;
+            --glow-color: rgba(37, 99, 235, 0.4);
+        }
+
+        body { 
+            font-family: 'Outfit', sans-serif; 
+            background: var(--bg-light); 
+            color: #1e293b; 
+            overflow-x: hidden;
+        }
+
+        /* প্রফেশনাল লাইট কার্ড */
+        .glass-container {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
+            border-radius: 2.5rem;
+        }
+
+        /* গ্লোয়িং টেক্সট ইফেক্ট */
+        .glow-text {
+            color: #1d4ed8;
+            text-shadow: 0 0 10px rgba(37, 99, 235, 0.3), 0 0 20px rgba(37, 99, 235, 0.1);
+            font-weight: 800;
+        }
+
+        .highlight-text {
+            background: linear-gradient(to right, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.2));
+            font-weight: 900;
+        }
+
+        .grid-box { 
+            background: #ffffff; 
+            padding: 20px; 
+            border-radius: 20px; 
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+        }
+        
+        .grid-box:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .seo-content h2, .seo-content h3 { 
+            color: #1e40af; 
+            text-shadow: 0 2px 10px rgba(30, 64, 175, 0.1);
+            margin-top: 1.5rem;
+            font-weight: 800;
+        }
+
+        .seo-content p { 
+            margin-bottom: 1rem; 
+            line-height: 1.8; 
+            color: #334155; 
+            text-align: justify;
+        }
+
+        .back-btn {
+            background: white;
+            border: 1px solid #e2e8f0;
+            color: #2563eb;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #2563eb;
+            color: white;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-10 flex flex-col items-center">
+
+    <main class="w-full max-w-3xl space-y-8">
+        
+        <div class="glass-container p-10 text-center relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </div>
+            <h2 class="text-xs font-bold text-blue-600 uppercase tracking-[0.4em] mb-6">Chronological Age Analysis</h2>
+            <div id="mainAge" class="text-5xl md:text-7xl highlight-text italic tracking-tighter">
+                Calculating...
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="grid-box text-center">
+                <p class="text-blue-600 text-[10px] font-black uppercase tracking-widest mb-1">Months</p>
+                <p id="totalMonths" class="text-2xl font-bold text-slate-800"></p>
+            </div>
+            <div class="grid-box text-center">
+                <p class="text-blue-600 text-[10px] font-black uppercase tracking-widest mb-1">Weeks</p>
+                <p id="totalWeeks" class="text-2xl font-bold text-slate-800"></p>
+            </div>
+            <div class="grid-box text-center">
+                <p class="text-blue-600 text-[10px] font-black uppercase tracking-widest mb-1">Days</p>
+                <p id="totalDays" class="text-2xl font-bold text-slate-800"></p>
+            </div>
+            <div class="grid-box text-center">
+                <p class="text-blue-600 text-[10px] font-black uppercase tracking-widest mb-1">Hours</p>
+                <p id="totalHours" class="text-2xl font-bold text-slate-800"></p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="glass-container p-8 border-l-8 border-blue-500">
+                <h3 class="text-blue-700 font-bold text-sm uppercase tracking-widest mb-4 flex items-center gap-2">🎂 Next Birthday</h3>
+                <p id="nextBirthday" class="text-2xl font-extrabold text-slate-800"></p>
+                <p id="nextBdayIn" class="text-blue-600/70 text-sm mt-2 font-semibold"></p>
+            </div>
+            <div class="glass-container p-8 border-l-8 border-purple-500">
+                <h3 class="text-purple-700 font-bold text-sm uppercase tracking-widest mb-4 flex items-center gap-2">⭐ Zodiac Sign</h3>
+                <p id="zodiacSign" class="text-2xl font-extrabold text-slate-800"></p>
+                <p id="zodiacTrait" class="text-purple-600/70 text-sm mt-2 font-semibold italic">Professional Astrological Alignment.</p>
+            </div>
+        </div>
+
+        <div class="glass-container p-8 bg-gradient-to-r from-white to-red-50/30 border-t-4 border-red-500">
+            <h3 class="text-red-600 font-bold text-xs uppercase tracking-[0.3em] mb-3">💓 Estimated Heart Activity</h3>
+            <p id="heartbeats" class="text-4xl font-black text-red-600 drop-shadow-sm"></p>
+            <p class="text-slate-400 text-[10px] mt-2 italic font-bold uppercase">*Based on an average of 80 beats per minute</p>
+        </div>
+
+        <div class="mt-16 glass-container seo-content p-8 md:p-14">
+            <h3 class="text-2xl font-extrabold mb-6 uppercase italic tracking-tighter border-b border-blue-100 pb-4 glow-text">Life Data Analysis & Digital Chronology</h3>
+            <div class="space-y-6 text-justify font-medium">
+                <p>The results displayed above provide a comprehensive breakdown of your journey through time. We believe that understanding your exact age is the first step toward better time management and life planning. Our <strong>Age Result Pro</strong> engine calculates your life statistics with extreme precision, considering leap years and the differing lengths of months in the calendar.</p>
+                
+                <p>By converting your age into months, weeks, days, and even hours, we offer a new perspective on how much time has passed. For instance, knowing that your heart has beaten millions of times since your birth highlights the incredible biological resilience of the human body. This data is calculated instantly on your device to ensure maximum privacy.</p>
+
+                <p>Beyond simple numbers, our tool also integrates <strong>Zodiac Sign</strong> analysis. Astronomy and astrology have long used birth dates to categorize personality traits and cosmic alignments. Coupled with our "Next Birthday Countdown," this tool helps you prepare for your future milestones with excitement and accuracy.</p>
+            </div>
+        </div>
+
+        <div class="text-center pt-8 pb-10">
+            <a href="age-calculator.html" class="back-btn inline-block px-12 py-4 rounded-2xl font-black tracking-widest uppercase text-sm shadow-sm">
+                ← Back to Calculator
+            </a>
+        </div>
+    </main>
+
+    <footer class="pb-10 opacity-60 text-center mt-10">
+        <p class="text-[10px] font-bold text-blue-900 uppercase tracking-[0.5em]">© 2026 Ultimate Tools | Precision in every second</p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const bDay = parseInt(params.get('day'));
+        const bMonth = parseInt(params.get('month'));
+        const bYear = parseInt(params.get('year'));
+
+        if (!isNaN(bDay) && !isNaN(bMonth) && !isNaN(bYear)) {
+            const birthDate = new Date(bYear, bMonth, bDay);
+            const today = new Date();
+
+            // Calculate Age
+            let years = today.getFullYear() - birthDate.getFullYear();
+            let months = today.getMonth() - birthDate.getMonth();
+            let days = today.getDate() - birthDate.getDate();
+
+            if (days < 0) {
+                months--;
+                days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+            }
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            document.getElementById('mainAge').innerHTML = `${years}Y <span class="text-2xl text-blue-400">/</span> ${months}M <span class="text-2xl text-blue-400">/</span> ${days}D`;
+
+            // Stats Calculation
+            const diffInMs = today - birthDate;
+            const totalDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
+            document.getElementById('totalDays').innerText = totalDays.toLocaleString();
+            document.getElementById('totalMonths').innerText = Math.floor(totalDays / 30.44).toLocaleString();
+            document.getElementById('totalWeeks').innerText = Math.floor(totalDays / 7).toLocaleString();
+            document.getElementById('totalHours').innerText = (totalDays * 24).toLocaleString();
+            document.getElementById('heartbeats').innerText = (totalDays * 24 * 60 * 80).toLocaleString();
+
+            // Next Birthday
+            let nextBday = new Date(today.getFullYear(), bMonth, bDay);
+            if (today > nextBday) {
+                nextBday.setFullYear(today.getFullYear() + 1);
+            }
+            const msToNext = nextBday - today;
+            const daysToNext = Math.ceil(msToNext / (1000 * 60 * 60 * 24));
+            document.getElementById('nextBirthday').innerText = nextBday.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+            document.getElementById('nextBdayIn').innerText = `Your special day is coming in ${daysToNext} days!`;
+
+            // Zodiac Sign Logic
+            const zodiacSigns = ["Capricorn", "Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius"];
+            const lastDays = [19, 18, 20, 19, 20, 20, 22, 22, 22, 22, 21, 21];
+            let zIndex = (bDay > lastDays[bMonth]) ? (bMonth + 1) % 12 : bMonth;
+            document.getElementById('zodiacSign').innerText = zodiacSigns[zIndex];
+        } else {
+            document.getElementById('mainAge').innerText = "Invalid Date";
+        }
+    </script>
+</body>
+</html>

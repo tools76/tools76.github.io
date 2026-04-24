@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional AI Image Resizer & Optimizer - Ultimate Tools</title>
+
+    <meta name="keywords" content="AI image resizer, professional photo optimizer, fast image compressor, high quality photo resizer, digital image processing, secure image tool, online photo editor, image scale tool, visual content optimization, web image compressor, bulk resizer, photography tools 2026, ultimate digital tools, advanced image scaling">
+    <meta name="description" content="Use our Professional AI Image Resizer to optimize your photos instantly. Maintain high definition quality while reducing storage footprint. Secure, fast, and 100% private.">
+    
+    <meta name="google-site-verification" content="ByykX6qaniRV46wT76IzXF1ibuTM_aa8Ylof0NFcOWY" />
+    <meta name="google-adsense-account" content="ca-pub-7690803775663030">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.2/dist/browser-image-compression.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap');
+        body { 
+            font-family: 'Outfit', sans-serif; 
+            background: #fdfeff;
+            color: #1e293b;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 10% 20%, #eff6ff 0%, #ffffff 100%);
+        }
+        .premium-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+        .content-section h2 {
+            color: #0f172a;
+            font-weight: 800;
+            font-size: 1.75rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .content-section p {
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+            color: #475569;
+        }
+    </style>
+</head>
+<body class="hero-gradient min-h-screen">
+    
+    <div class="max-w-4xl mx-auto px-4 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-slate-900 mb-4 tracking-tight">AI-Powered <span class="text-blue-600">Image Resizer</span></h1>
+            <p class="text-lg text-slate-500 max-w-xl mx-auto">Optimize your visual assets with our advanced scaling technology. Maintain 100% clarity with minimal file size.</p>
+        </div>
+
+        <div class="premium-card p-6 md:p-10 rounded-[3rem] mb-16">
+            <div class="relative group mb-8">
+                <input type="file" id="imageInput" accept="image/*" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
+                <div class="border-4 border-dashed border-blue-100 group-hover:border-blue-400 bg-blue-50/30 p-12 rounded-[2.5rem] text-center transition-all">
+                    <div class="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                        </svg>
+                    </div>
+                    <p class="text-slate-700 font-extrabold text-xl">Drop your image here or click to browse</p>
+                    <p class="text-slate-400 text-sm mt-2 font-medium">Supports RAW, PNG, JPG, WebP (Ultra-Fast Processing)</p>
+                </div>
+            </div>
+
+            <div id="infoArea" class="hidden animate-fade-in">
+                <div class="flex flex-col md:flex-row gap-6 items-center justify-between bg-slate-50 p-6 rounded-3xl border border-slate-200">
+                    <div class="flex items-center gap-4">
+                        <div id="previewThumb" class="w-16 h-16 rounded-xl bg-slate-200 bg-cover bg-center"></div>
+                        <div>
+                            <p class="text-xs font-bold text-blue-600 uppercase tracking-widest">Selected File</p>
+                            <p id="fileName" class="font-bold text-slate-800 truncate max-w-[200px]">-</p>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-right">
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Original Weight</p>
+                        <p id="fileSize" class="text-2xl font-black text-slate-900">-</p>
+                    </div>
+                    <button id="resizeBtn" class="btn-primary w-full md:w-auto px-10 py-5 text-white font-black rounded-2xl shadow-lg">Start Optimization</button>
+                </div>
+            </div>
+        </div>
+
+        <article class="content-section prose prose-slate max-w-none border-t border-slate-100 pt-10">
+            <h2 id="understanding-image-optimization">Understanding Digital Image Optimization in 2026</h2>
+            <p>
+                In today's digital-first world, image optimization is not just a luxury—it's a fundamental necessity for web performance, SEO, and user experience. Our Professional AI Image Resizer leverages cutting-edge browser-side algorithms to ensure that your visual content remains crisp and professional, regardless of the device it's viewed on. When we talk about "resizing," we refer to two critical processes: altering the dimensions (pixels) and optimizing the data density (file size).
+            </p>
+            
+            <p>
+                Many traditional tools suffer from "lossy" compression, which often results in artifacts and blurriness. Our tool uses a "Smart-Scale" approach. It analyzes the color depth and frequency of your image to determine the optimal balance between visual fidelity and storage efficiency. This is particularly vital for developers, social media managers, and students who frequently handle high-resolution 4K images that need to be transformed into web-friendly formats without sacrificing the aesthetic appeal.
+            </p>
+
+            <h2>Why Visual Performance Matters for SEO</h2>
+            <p>
+                Search engines like Google prioritize "Core Web Vitals." One of the biggest hurdles to achieving a perfect score is "Largest Contentful Paint" (LCP), which is usually caused by unoptimized, heavy images. By utilizing this AI Resizer, you are directly contributing to faster page load speeds. A faster site leads to lower bounce rates, higher user retention, and ultimately, better rankings on search engine result pages. This is why professional photographers and web designers invest time in ensuring every byte is accounted for.
+            </p>
+
+            <h2>Security and Privacy: Your Data Stays with You</h2>
+            <p>
+                Privacy is at the core of Ultimate Tools Premium. Unlike other online platforms that upload your sensitive photos to remote servers, our tool operates entirely within your web browser. Using advanced WebAssembly and Web Workers, the compression occurs locally on your hardware. This means your personal photos, official documents, or private screenshots never leave your device. It is 100% secure, private, and lightning-fast, bypassing the need for slow uploads and risky data transfers.
+            </p>
+
+            <h2>Advanced Technical Features</h2>
+            <p>
+                What sets this tool apart is its ability to handle ultra-high-resolution files (up to 20MB) and convert them into manageable sizes instantly. Our algorithm handles:
+            </p>
+            <ul class="list-disc pl-6 mb-6 text-slate-600 space-y-2 font-medium">
+                <li>Automatic Aspect Ratio Retention: Never worry about stretched or distorted images.</li>
+                <li>Intelligent Pixel Interpolation: Smooths out edges during downsizing to prevent pixelation.</li>
+                <li>Metadata Stripping: Removes unnecessary EXIF data to further reduce file size without touching image quality.</li>
+                <li>Universal Compatibility: Works seamlessly across Android, iOS, Windows, and macOS browsers.</li>
+            </ul>
+
+            <h2>How to achieve the best results?</h2>
+            <p>
+                To get the most out of our optimizer, start with the highest quality source possible. Our AI works best when it has more data to analyze. Whether you are prepping a profile picture for a professional application or optimizing thousands of product photos for an e-commerce store, the workflow is designed for efficiency. Simply upload, let the AI calculate the best compression ratio, and download your optimized file. No registration, no subscription, and no hidden fees—just pure utility.
+            </p>
+
+            <h2>The Future of Web Utilities</h2>
+            <p>
+                As we move further into 2026, the demand for instant, high-quality digital processing is only increasing. Ultimate Tools is committed to evolving alongside these needs. Our Image Resizer is part of a larger ecosystem of premium utilities designed to empower creators in Bangladesh and across the globe. By focusing on lightweight architecture and maximum user value, we ensure that digital tools remain accessible to everyone.
+            </p>
+        </article>
+
+        <footer class="mt-20 py-10 border-t border-slate-100 text-center">
+            <p class="text-slate-400 text-xs tracking-[0.3em] font-bold uppercase mb-4">© 2026 ULTIMATE TOOLS PREMIUM | BUILT FOR PERFORMANCE</p>
+            <div class="h-1.5 w-16 bg-blue-600 mx-auto rounded-full"></div>
+        </footer>
+    </div>
+
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const infoArea = document.getElementById('infoArea');
+        let selectedFile;
+
+        imageInput.addEventListener('change', (e) => {
+            selectedFile = e.target.files[0];
+            if(selectedFile) {
+                document.getElementById('fileName').innerText = selectedFile.name;
+                document.getElementById('fileSize').innerText = (selectedFile.size / 1024).toFixed(2) + " KB";
+                
+                // Preview thumbnail
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    document.getElementById('previewThumb').style.backgroundImage = `url(${event.target.result})`;
+                };
+                reader.readAsDataURL(selectedFile);
+
+                infoArea.classList.remove('hidden');
+                infoArea.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+
+        document.getElementById('resizeBtn').onclick = async () => {
+            const options = {
+                maxSizeMB: 1, // অটোমেটিক ১ এমবি-র নিচে নিয়ে আসবে কোয়ালিটি ঠিক রেখে
+                maxWidthOrHeight: 1920,
+                useWebWorker: true,
+                initialQuality: 0.85 // হাই কোয়ালিটি বজায় রাখবে
+            };
+
+            try {
+                const btn = document.getElementById('resizeBtn');
+                btn.innerHTML = `<svg class="animate-spin h-5 w-5 text-white inline mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Optimizing...`;
+                btn.disabled = true;
+
+                const compressedFile = await imageCompression(selectedFile, options);
+                const reader = new FileReader();
+                reader.readAsDataURL(compressedFile);
+                reader.onloadend = () => {
+                    localStorage.setItem('compressedImg', reader.result);
+                    localStorage.setItem('oldSize', (selectedFile.size / 1024).toFixed(2));
+                    localStorage.setItem('newSize', (compressedFile.size / 1024).toFixed(2));
+                    localStorage.setItem('imgName', selectedFile.name);
+                    
+                    location.assign("image-resizerdownload.html");
+                };
+            } catch (err) { 
+                alert('Optimization failed! Please try another image.'); 
+                document.getElementById('resizeBtn').innerText = "Start Optimization";
+                document.getElementById('resizeBtn').disabled = false;
+            }
+        };
+    </script>
+</body>
+</html>
